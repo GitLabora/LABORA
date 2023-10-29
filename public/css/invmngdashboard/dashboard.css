@@ -113,10 +113,141 @@ div.dashboard_topNav a i{
 div.dashboard_content{
 	padding: 30px 30px 30px 30px ;
 }
-
+/*
 div.dashboard_content_main{
 	background: #FFFFFF ;
 	height: 100%;
 	min-height: 900px;
+}*/
+
+.main{
+
+    position:relative;
+    padding:10px;
+    width:100%;
 }
 
+.main-top{
+
+    display:flex;
+    width:100%;
+}
+
+.main-top i{
+
+    position:absolute;
+    right:0;
+    margin:10px 30px;
+    color:rgb(90, 90, 90);
+    cursor:pointer;
+}
+
+.details{
+
+    margin-top:20px;
+    text-transform: capitalize;
+}
+
+.Detail-List{
+    width:900px;
+    padding:5px;
+    margin-top:0px;
+    background:#fff;
+    border-radius:10px;
+    box-shadow:0 20px 35px rgb(0,0,0,0.1);
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -ms-border-radius:10px;
+    -o-border-radius:10px;
+}
+
+ 
+  .add-user-button {
+    margin-left:600px;
+    font-weight: bold;
+    padding:8px 10px;
+    border-radius:10px;
+    cursor:pointer;
+    background: transparent;
+    border: 1px solid #1d1dcf;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -ms-border-radius:10px;
+    -o-border-radius:10px;
+}
+
+  .header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  }
+  
+  
+
+.table{
+
+    border-collapse: collapse;
+    margin: 25px;
+    font-size:15px;
+    min-width:95%;
+    overflow:hidden;
+    border-radius:5px 5px 0 0;
+}
+
+#table-head{
+    text-align: left;
+}
+
+table thead tr{
+
+    color:#fff;
+    background:#1d1dcf;
+    font-weight:bold;
+}
+
+.table th,
+.table td{
+
+    padding:12px 12px;
+}
+
+.table tbody tr{
+
+    border-bottom:1px solid #ddd;
+}
+
+.table tbody tr:nth-of-type(odd){
+
+    background:#f3f3f3;
+
+}
+
+.table tbody tr.active{
+
+    font-weight:bold;
+    color:#0c0c0e;
+
+}
+
+.table body tr:last-of-type{
+
+border-bottom:2px solid #1d1dcf;
+
+}
+
+.table button{
+
+    padding:6px 20px;
+    border-radius:10px;
+    cursor:pointer;
+    background: transparent;
+    border: 1px solid #1d1dcf;
+
+}
+
+.table button:hover{
+
+    background:#b9b9cb;
+    color:#fff;
+    transition:0.5rem;
+}

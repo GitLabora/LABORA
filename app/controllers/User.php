@@ -130,7 +130,7 @@
             $_SESSION['username'] = $user['patient_name'];
             $_SESSION['userid'] = $user['patient_id'];
             $_SESSION['last_login_timestamp'] = time();
-            header("Location: ".URLROOT."PatientDashboard/patient");
+            header("Location: ".URLROOT."PatientDashboard/dashboard");
         }
 
         public function logout(){

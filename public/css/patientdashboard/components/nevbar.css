@@ -29,7 +29,7 @@
 body
 {
     min-height: 100vh;
-    overflow-x: hidden;
+    overflow-x: scroll;
 }
 
 .container
@@ -40,13 +40,12 @@ body
 
 .navigation
 {
+    background-image: url('/LABORA/public/img/background.png');
     position: fixed;
     width: 300px;
     height: 100%;
-    background-color: var(--darkblue);
-    border-left: 10px solid var(--darkblue);
+    /* background-color: var(--darkblue); */
     transition: 0.5s;
-
 }
 .logooo{
     display: flex;
@@ -54,7 +53,7 @@ body
     background-color:rgba(0, 0, 0, 0.4);
     margin-right: 10px;
     margin-top: 10px;
-    border-radius: 32px;
+    border-radius: 40px;
     height: 60px;
 }
 .logooo img{
@@ -87,6 +86,7 @@ body
     position: relative;
     width: 100%;
     list-style: none;
+    margin-right: 50px;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
 }
@@ -160,4 +160,172 @@ body
     height: 50px;
     border-radius: 50%;
     box-shadow: 30px -30px 0 10px white;
+}
+
+.logout a{
+    position: absolute;
+    top:580px;
+    left:65px;
+    display: flex;
+    flex-direction: row;
+    font-size: 0.9em;
+    background-color: #adab27;
+    width: 130px;
+    padding: 4px 12px;
+    border-radius: 64px;
+    text-decoration: none;
+    text-align: center;
+    color:black;
+}
+.button{
+    font-family: roboto;
+    width: 150px;
+}
+.button:hover{
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    transform: translate(1px, 1px);
+    transition-duration: 250ms;
+    font-family: roboto;
+}
+.logout a .icon{
+    font-size: 1.5em;
+    display: inline-block;
+    margin-top: 6px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.logout a span{
+    margin-top: 10px;
+    display: inline-block;
+    margin-top: 8px;
+}
+
+
+/* Top bar */
+.main{
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    max-height: 30vh;
+    background: white;
+    /* background-image: url('/LABORA/public/img/background.png'); */
+    transition: 0.5s;
+}
+
+.topbar
+{
+    background-color: var(--mainblue);
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+    margin: 10px 10px;
+    border-radius: 40px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+.toggle
+{
+    color:white;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    cursor: pointer;
+}
+.toggle:hover{
+   color: black;
+}
+.user
+{
+    text-align: center;
+    justify-content: center;
+}
+.user img
+{
+    display: inline-block;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    top: 18px;
+    right: 32px;
+}
+.user h4{
+    font-family: mainfont;
+    color:white;
+    font-weight: 100;
+    position: absolute;
+    top: 26px;
+    right: 80px;
+}
+.chat{
+    position: absolute;
+    right:300px;
+    font-size: 1.5em;
+    color: var(--mainyellow);
+    cursor: pointer;
+    margin-left: 400px;
+    margin-top: 8px
+}
+.notification{
+    position: absolute;
+    right:340px;
+    margin-left: -280px;
+    margin-top: 8px;
+    font-size: 1.5em;
+    color: var(--mainyellow);
+    cursor: pointer;
+}
+
+
+/* table style */
+
+table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    width: 100%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+    background-color: white;
+    color: var(--darkblue);
+    text-align: center;
+    justify-content: center;
+}
+thead tr {
+    background-color: var(--darkblue);
+    color: #ffffff;
+    text-align: left;
+    text-align: center;
+    justify-content: center;
+}
+
+
+th,
+td {
+    padding: 12px 15px;
+}
+
+tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+tbody tr:hover {
+    color: white;
+    background-color: #3D30A2;
 }

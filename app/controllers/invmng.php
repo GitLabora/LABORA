@@ -14,6 +14,17 @@
             $this->view("invmng/product" , $data);
         }
 
+        public function invmngAddProduct(){  
+            $data = [];
+            $this->view("invmng/addProduct" , $data);
+        }
+
+        public function invmngUpdateProduct(){  
+            $data = [];
+            $this->view("invmng/updateProduct" , $data);
+        }
+
+
         public function invmngsupplier(){  
             $data = [];
             $this->view("invmng/supplier" , $data);

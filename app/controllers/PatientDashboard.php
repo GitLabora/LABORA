@@ -5,9 +5,9 @@
         }
 
         public function index(){
-            if(!isset($_SESSION['userid'])){
-                header("location: http://localhost/labora/user/logout");
-            }
+            // if(!isset($_SESSION['userid'])){
+            //     header("location: http://localhost/labora/user/logout");
+            // }
             // }else{
             //     if((time()-$_SESSION['last_login_timestamp'])>600){
             //         header("location: http://localhost/labora/user/logout");
@@ -20,10 +20,10 @@
             $this->view("patientdashboard/Patient" , $data);
         }
 
-        public function reports(){
-            if(!isset($_SESSION['userid'])){
-                header("location: http://localhost/labora/user/logout");
-            }
+        public function medicaltest(){
+            // if(!isset($_SESSION['userid'])){
+            //     header("location: http://localhost/labora/user/logout");
+            // }
             // }else{
             //     if((time()-$_SESSION['last_login_timestamp'])>600){
             //         header("location: http://localhost/labora/user/logout");
@@ -33,13 +33,13 @@
             // }
 
             $data = [];
-            $this->view("patientdashboard/reports" , $data);
+            $this->view("patientdashboard/medicaltest" , $data);
         }
 
-        public function appointment(){
-            if(!isset($_SESSION['userid'])){
-                header("location: http://localhost/labora/user/logout");
-            }
+        public function userAccount(){
+            // if(!isset($_SESSION['userid'])){
+            //     header("location: http://localhost/labora/user/logout");
+            // }
             // }else{
             //     if((time()-$_SESSION['last_login_timestamp'])>600){
             //         header("location: http://localhost/labora/user/logout");
@@ -49,13 +49,13 @@
             // }
 
             $data = [];
-            $this->view("patientdashboard/appointment" , $data);
+            $this->view("patientdashboard/userAccount" , $data);
         }
 
         public function dashboard(){
-            if(!isset($_SESSION['userid'])){
-                header("location: http://localhost/labora/user/logout");
-            }
+            // if(!isset($_SESSION['userid'])){
+            //     header("location: http://localhost/labora/user/logout");
+            // }
             // }else{
             //     if((time()-$_SESSION['last_login_timestamp'])>600){
             //         header("location: http://localhost/labora/user/logout");
@@ -68,10 +68,10 @@
             $this->view("patientdashboard/dashboard" , $data);
         }
 
-        public function profile(){
-            if(!isset($_SESSION['userid'])){
-                header("location: http://localhost/labora/user/logout");
-            }
+        public function reports(){
+            // if(!isset($_SESSION['userid'])){
+            //     header("location: http://localhost/labora/user/logout");
+            // }
             // }else{
             //     if((time()-$_SESSION['last_login_timestamp'])>600){
             //         header("location: http://localhost/labora/user/logout");
@@ -81,13 +81,13 @@
             // }
 
             $data = [];
-            $this->view("patientdashboard/profile" , $data);
+            $this->view("patientdashboard/reports" , $data);
         }
 
-        public function medicaltest(){
-            if(!isset($_SESSION['userid'])){
-                header("location: http://localhost/labora/user/logout");
-            }
+        public function payment(){
+            // if(!isset($_SESSION['userid'])){
+            //     header("location: http://localhost/labora/user/logout");
+            // }
             // }else{
             //     if((time()-$_SESSION['last_login_timestamp'])>600){
             //         header("location: http://localhost/labora/user/logout");
@@ -97,7 +97,7 @@
             // }
 
             $data = [];
-            $this->view("patientdashboard/medicaltest" , $data);
+            $this->view("patientdashboard/payment" , $data);
         }
     }
 ?>

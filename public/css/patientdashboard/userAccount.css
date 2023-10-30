@@ -208,3 +208,17 @@ button.del:hover{
 {
     color: var(--darkblue);
 }
+
+/* table icon */
+table .download,
+table .delete{
+
+    color: var(--darkblue);
+    font-size: 2.0em;
+    margin-left: 10px ;
+}
+
+tbody tr:hover .download,
+tbody tr:hover .delete{
+    color: white;
+}

@@ -19,25 +19,25 @@
     <div class="container_1">
         <div class="boxset-1">
             <div class="box box-1">
-                <span>65</span><br>
-                <h5>Number of Reports Received</h5><br>
-                <p>patient are kept up to date with real-time updates to their medical history.</p>
+                <span>8</span><br>
+                <h5>Number of User Accounts</h5><br>
+                <!-- <p>patient are kept up to date with real-time updates to their medical history.</p> -->
             </div>
             <div class="box box-2">
-                <span>6</span><br>
-                <h5>Number of Medical Test Types</h5><br>
-                <p>This box provides a snapshot of the variety of medical test types the patient has undergone. </p>
+                <span>16</span><br>
+                <h5>Number of Medical Tests</h5><br>
+                <p>Provides the number of medical tests performed today</p>
             </div>
             <div class="box box-3">
-                <span>600$</span><br>
-                <h5>Medical Test Expenses</h5><br>
-                <p>The total expenses will automatically update as new costs are incurred. </p>
+                <span>Rs 16000</span><br>
+                <h5>Total Payment</h5><br>
+                <p>Today, received total payment </p>
             </div>
-            <div class="box box-4">
+            <!-- <div class="box box-4">
                 <span>MRI</span><br>
                 <h5>Most Frequent Test</h5><br>
                 <p>This box identifies the primary medical test type that the patient has taken most often.</p>
-            </div>
+            </div> -->
         </div>
     </div>
 

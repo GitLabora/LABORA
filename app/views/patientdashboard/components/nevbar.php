@@ -10,7 +10,7 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <!-- annimation icons -->
     <script src="https://cdn.lordicon.com/lordicon-1.1.0.js"></script>
-    <title>Patient dashboard</title>
+    <title>Admin dashboard</title>
 </head>
 <body>
     <div class="container">
@@ -27,27 +27,27 @@
                     </a>
                 </li>
                 <li>
-                    <a href="http://localhost/labora/PatientDashboard/appointment">
+                    <a href="http://localhost/labora/PatientDashboard/userAccount">
                     <span class="icon"><ion-icon name="calendar-number"></ion-icon></ion-icon></span>
-                    <span class="title">Appointment</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="http://localhost/labora/PatientDashboard/reports">
-                    <span class="icon"><ion-icon name="reader"></ion-icon></span>
-                    <span class="title">Medical reports</span>
+                    <span class="title">User Accounts</span>
                     </a>
                 </li>
                 <li>
                     <a href="http://localhost/labora/PatientDashboard/medicaltest">
                     <span class="icon"><ion-icon name="thermometer"></ion-icon></span>
-                    <span class="title">Medical tests</span>
+                    <span class="title">Medical Tests</span>
                     </a>
                 </li>
                 <li>
-                    <a href="http://localhost/labora/PatientDashboard/profile">
-                    <span class="icon"><ion-icon name="person"></ion-icon></span>
-                    <span class="title">Profile</span>
+                    <a href="http://localhost/labora/PatientDashboard/payment">
+                    <span class="icon"><ion-icon name="cash-outline"></ion-icon></span>
+                    <span class="title">Payment</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://localhost/labora/PatientDashboard/reports">
+                    <span class="icon"><ion-icon name="document-attach-outline"></ion-icon></span>
+                    <span class="title">Reports</span>
                     </a>
                 </li>
             </ul>
@@ -74,7 +74,7 @@
                     <ion-icon name="notifications"></ion-icon>
                 </div>
                 <div class="user">
-                    <h4><?php echo $_SESSION['username'];?></h4>
+                    <!-- <h4><?php echo $_SESSION['username'];?></h4> -->
                     <img src="/labora/public/img/patientdashboard/user1.jpg" alt="">
                 </div>
             </div>

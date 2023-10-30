@@ -99,5 +99,22 @@
             $data = [];
             $this->view("patientdashboard/medicaltest" , $data);
         }
+
+        public function appointment_form(){
+            if(!isset($_SESSION['userid'])){
+                header("location: http://localhost/labora/user/logout");
+            }
+            // }else{
+            //     if((time()-$_SESSION['last_login_timestamp'])>600){
+            //         header("location: http://localhost/labora/user/logout");
+            //     }else{
+            //         $_SESSION['last_login_timestamp'] = time();
+            //     }
+            // }
+
+            $data = [];
+            $this->view("patientdashboard/appointment_form" , $data);
+        }
     }
 ?>
+

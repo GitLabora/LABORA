@@ -29,80 +29,34 @@
         <div>
         <table>
         <thead>
-            <tr>
-                <th>Index</th>
-                <th>Ref No</th>
-                <th>Test Type</th>
-                <th>Date</th>
-                <th>Message</th>
-                <th></th>
-            </tr>
+        <tr>
+        <th>Order ID</th>
+        <th>Supplier Name</th>
+        <th>Quotation Document</th>
+        <th>Quotation Date</th>
+        <th>Action</th>
+    </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>REF-001</td>
-                <td>Type A</td>
-                <td>2023-10-29</td>
-                <td>Sample comment</td>
-                <td><a href="#" class="download"><ion-icon name="checkbox"></ion-icon></a>
+        <table>
+   
+    <tr>
+        <td>PO-001</td>
+        <td>ABC Electronics</td>
+        <td><a href="supplier_quotation_001.pdf">Supplier Quotation 001</a></td>
+        <td>2023-10-20</td>
+        <td><a href="#" class="download"><ion-icon name="checkbox"></ion-icon></a>
                 <a href="#" class="delete"><ion-icon name="trash"></ion-icon></a></td>
-                
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>REF-002</td>
-                <td>Type B</td>
-                <td>2023-10-30</td>
-                <td>Another comment</td>
-                <td><a href="#" class="download"><ion-icon name="checkbox"></ion-icon></a>
+    </tr>
+    <tr>
+        <td>PO-002</td>
+        <td>XYZ Supplies</td>
+        <td><a href="supplier_quotation_002.pdf">Supplier Quotation 002</a></td>
+        <td>2023-11-10</td>
+        <td><a href="#" class="download"><ion-icon name="checkbox"></ion-icon></a>
                 <a href="#" class="delete"><ion-icon name="trash"></ion-icon></a></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>REF-002</td>
-                <td>Type B</td>
-                <td>2023-10-30</td>
-                <td>Another comment</td>
-                <td><a href="#" class="download"><ion-icon name="checkbox"></ion-icon></a>
-                <a href="#" class="delete"><ion-icon name="trash"></ion-icon></a></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>REF-002</td>
-                <td>Type B</td>
-                <td>2023-10-30</td>
-                <td>Another comment</td>
-                <td><a href="#" class="download"><ion-icon name="checkbox"></ion-icon></a>
-                <a href="#" class="delete"><ion-icon name="trash"></ion-icon></a></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>REF-002</td>
-                <td>Type B</td>
-                <td>2023-10-30</td>
-                <td>Another comment</td>
-                <td><a href="#" class="download"><ion-icon name="checkbox"></ion-icon></a>
-                <a href="#" class="delete"><ion-icon name="trash"></ion-icon></a></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>REF-002</td>
-                <td>Type B</td>
-                <td>2023-10-30</td>
-                <td>Another comment</td>
-                <td><a href="#" class="download"><ion-icon name="checkbox"></ion-icon></a>
-                <a href="#" class="delete"><ion-icon name="trash"></ion-icon></a></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>REF-002</td>
-                <td>Type B</td>
-                <td>2023-10-30</td>
-                <td>Another comment</td>
-                <td><a href="#" class="download"><ion-icon name="checkbox"></ion-icon></a>
-                <a href="#" class="delete"><ion-icon name="trash"></ion-icon></a></td>
-            </tr>
+    </tr>
+
             <!-- Add more rows as needed -->
         </tbody>
         </table>

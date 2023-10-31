@@ -40,32 +40,38 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>REF-001</td>
-                <td>Item A</td>
-                <td><button type="submit" class="submit button">View</button></td>
-                
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>REF-002</td>
-                <td>Item B</td>
-                <td><button type="submit" class="submit button">View</button></td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>REF-003</td>
-                <td>Item C</td>
-                <td><button type="submit" class="submit button">View</button></td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>REF-004</td>
-                <td>Item D</td>
-                <td><button type="submit" class="submit button">View</button></td>
-            </tr>
-            
+        <tr>
+        <td>1</td>
+        <td>1001</td>
+        <td>Laptop - Model A</td>
+        <td>25</td>
+        <td>10</td>
+        <td>$800</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>1002</td>
+        <td>Desktop PC - Model B</td>
+        <td>15</td>
+        <td>20</td>
+        <td>$1200</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>1003</td>
+        <td>Monitor - 27-inch</td>
+        <td>30</td>
+        <td>15</td>
+        <td>$250</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>1004</td>
+        <td>Keyboard - Wireless</td>
+        <td>50</td>
+        <td>30</td>
+        <td>$30</td>
+    </tr>
             <!-- Add more rows as needed -->
         </tbody>
         </table>

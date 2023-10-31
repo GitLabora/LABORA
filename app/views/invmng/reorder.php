@@ -21,88 +21,47 @@
             <h3>Items to reorder</h3>
         </div>
         <div class="line"></div>
-        <div class="searchbar">
-            <input type="text" class="search" placeholder="Enter Item Name">
-            <a href="#" class="searchbtn">Search</a>
-        </div>
+        
 
         <div>
         <table>
         <thead>
-            <tr>
-                <th>Index</th>
-                <th>Ref No</th>
-                <th>Test Type</th>
-                <th>Date</th>
-                <th>Message</th>
-                <th></th>
-            </tr>
+        <tr>
+        <th>Item ID</th>
+        <th>Item Name</th>
+       
+        <th>Quantity in Stock</th>
+        <th>Reorder Level</th>
+        <th>Action</th>
+    </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>REF-001</td>
-                <td>Type A</td>
-                <td>2023-10-29</td>
-                <td>Sample comment</td>
-                <td><a href="#" class="download"><ion-icon name="cart"></ion-icon></a>
-                </td>
-                
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>REF-002</td>
-                <td>Type B</td>
-                <td>2023-10-30</td>
-                <td>Another comment</td>
-                <td><a href="#" class="download"><ion-icon name="cart"></ion-icon></a>
-                </td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>REF-002</td>
-                <td>Type B</td>
-                <td>2023-10-30</td>
-                <td>Another comment</td>
-                <td><a href="#" class="download"><ion-icon name="cart"></ion-icon></a>
-                </td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>REF-002</td>
-                <td>Type B</td>
-                <td>2023-10-30</td>
-                <td>Another comment</td>
-                <td><a href="#" class="download"><ion-icon name="cart"></ion-icon></a>
-                </td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>REF-002</td>
-                <td>Type B</td>
-                <td>2023-10-30</td>
-                <td>Another comment</td>
-                <td><a href="#" class="download"><ion-icon name="cart"></ion-icon></a>
-                </td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>REF-002</td>
-                <td>Type B</td>
-                <td>2023-10-30</td>
-                <td>Another comment</td>
-                <td><a href="#" class="download"><ion-icon name="cart"></ion-icon></a>
-                </td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>REF-002</td>
-                <td>Type B</td>
-                <td>2023-10-30</td>
-                <td>Another comment</td>
-                <td><a href="#" class="download"><ion-icon name="cart"></ion-icon></a>
-                </td>
-            </tr>
+     
+    <tr>
+        <td>1001</td>
+        <td>Chemical A</td>
+       
+        <td>8</td>
+        <td>10</td>
+        <td><a href="#" class="download"><ion-icon name="cart"></ion-icon></a></td>
+    </tr>
+    <tr>
+        <td>1002</td>
+        <td>Chemical B</td>
+    
+        <td>18</td>
+        <td>20</td>
+        <td><a href="#" class="download"><ion-icon name="cart"></ion-icon></a></td>
+    </tr>
+    <tr>
+        <td>1003</td>
+        <td>Chemical D</td>
+    
+        <td>3</td>
+        <td>5</td>
+        <td><a href="#" class="download"><ion-icon name="cart"></ion-icon></a></td>
+    </tr>
+           
             <!-- Add more rows as needed -->
         </tbody>
         </table>

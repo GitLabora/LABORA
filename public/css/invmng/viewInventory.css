@@ -151,3 +151,27 @@ button.submit:hover {
 {
     color: var(--darkblue);
 }
+
+button.delete {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button.delete:hover {
+    background-color: #0056b3;
+}
+
+button.delete {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button.delete:hover {
+    background-color: #0056b3;
+}

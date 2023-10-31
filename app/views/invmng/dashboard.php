@@ -20,7 +20,7 @@
         <div class="boxset-1">
             <a href="http://localhost/labora/invmng/expiredChemicals">
                 <div class="box box-1">
-                    <span>9</span><br>
+                    <span>3</span><br>
                     <h5>Expiered Chemicals</h5><br>
                     <p>This shows the no of chemicals expires on that day.</p>
                 </div>
@@ -28,7 +28,7 @@
 
             <a href="http://localhost/labora/invmng/reorder">
                 <div class="box box-3">
-                    <span>2</span><br>
+                    <span>3</span><br>
                     <h5>Items has reached reorder limit</h5><br>
                     <p>No of items which have reached their reeorder limit shows here. </p>
                 </div>
@@ -36,7 +36,7 @@
 
             <a href="http://localhost/labora/invmng/quotations">
                 <div class="box box-2">
-                    <span>6</span><br>
+                    <span>2</span><br>
                     <h5>No of quotations recieved</h5><br>
                     <p>No of quotations which has recieved on that day shows here. </p>
                 </div>

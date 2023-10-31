@@ -14,20 +14,93 @@
     <title>Inventory Manager dashboard</title>
 </head>
 <body>
-    <?php require_once 'components/dashnavbar.php' ?>
+<?php require_once 'components/dashnavbar.php' ?>
     <div class="container_1">
 
         <div class="tablename">
-            <h3>Invoices</h3>
+            <h3>Inventory Item Details</h3>
         </div>
         <div class="line"></div>
-        <div class="searchbar">
-            <input type="text" class="search" placeholder="Enter order ID">
-            <a href="#" class="searchbtn">Search</a>
-        </div>
+
+        <div class="cards">
+                    <div class="card-single">
+                        <div>
+                            <span>ADD</span>
+                            <h1>Create Record</h1>
+                        </div>
+                        <div>
+                            
+                        </div>
+                    </div>
+                    <div class="card-single">
+                        <div>
+                            <span>NUMBER OF PASSENGERS</span>
+                            <h1>250</h1>
+                        </div>
+                        <div>
+                           
+                        </div>
+                    </div>
+                </div>
 
         <div>
-        
+
+        <table>
+        <thead>
+            <tr>
+                <th>Index</th>
+                <th>Item ID</th>
+                <th>Item Name</th>
+                <th>Quantity in Stock</th>
+                <th>Reorder Level</th>
+                <th>Purchase Price</th>
+                <th>Item List</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td>1</td>
+        <td>1001</td>
+        <td>Laptop - Model A</td>
+        <td>25</td>
+        <td>10</td>
+        <td>$800</td>
+        <td><button type="submit" class="submit button">View</button></a>
+                </td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>1002</td>
+        <td>Desktop PC - Model B</td>
+        <td>15</td>
+        <td>20</td>
+        <td>$1200</td>
+        <td><button type="submit" class="submit button">View</button></a>
+                </td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>1003</td>
+        <td>Monitor - 27-inch</td>
+        <td>30</td>
+        <td>15</td>
+        <td>$250</td>
+        <td><button type="submit" class="submit button">View</button></a>
+                </td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>1004</td>
+        <td>Keyboard - Wireless</td>
+        <td>50</td>
+        <td>30</td>
+        <td>$30</td>
+        <td><button type="submit" class="submit button">View</button></a>
+                </td>
+    </tr>
+            <!-- Add more rows as needed -->
+        </tbody>
+        </table>
         </div>
     </div>
 </body>

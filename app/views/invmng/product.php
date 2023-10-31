@@ -22,7 +22,7 @@
         </div>
         <div class="line"></div>
         <div class="searchbar">
-            <input type="text" class="search" placeholder="Enter Suplier">
+            <input type="text" class="search" placeholder="Enter Item">
             <a href="#" class="searchbtn">Search</a>
         </div>
 
@@ -36,7 +36,7 @@
                 <th>Quantity in Stock</th>
                 <th>Reorder Level</th>
                 <th>Purchase Price</th>
-                <td></td>
+                <th>Item List</th>
             </tr>
         </thead>
         <tbody>

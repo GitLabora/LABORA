@@ -44,7 +44,7 @@
 
             <a href="http://localhost/labora/invmng/invoices">
                 <div class="box box-3">
-                    <span>1</span><br>
+                    <span>2</span><br>
                     <h5>Invoice has recieved</h5><br>
                     <p>This box identifies the no of invoices recieved from the suppliers on that day.</p>
                 </div>

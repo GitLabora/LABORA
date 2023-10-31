@@ -21,7 +21,10 @@
             <h3>Inventory Item Details</h3>
         </div>
         <div class="line"></div>
-        
+        <div class="searchbar">
+            <input type="text" class="search" placeholder="Enter Suplier">
+            <a href="#" class="searchbtn">Search</a>
+        </div>
 
         <div>
         <table>
@@ -30,6 +33,9 @@
                 <th>Index</th>
                 <th>Item ID</th>
                 <th>Item Name</th>
+                <th>Quantity in Stock</th>
+                <th>Reorder Level</th>
+                <th>Purchase Price</th>
                 <td></td>
             </tr>
         </thead>
@@ -59,24 +65,7 @@
                 <td>Item D</td>
                 <td><button type="submit" class="submit button">View</button></td>
             </tr>
-            <tr>
-                <td>5</td>
-                <td>REF-005</td>
-                <td>Item E</td>
-                <td><button type="submit" class="submit button">View</button></td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>REF-006</td>
-                <td>Item F</td>
-                <td><button type="submit" class="submit button">View</button></td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>REF-007</td>
-                <td>Item G</td>
-                <td><button type="submit" class="submit button">View</button></td>
-            </tr>
+            
             <!-- Add more rows as needed -->
         </tbody>
         </table>

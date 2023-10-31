@@ -31,11 +31,14 @@
         <thead>
             <tr>
                 <th>Index</th>
-                <th>Ref No</th>
-                <th>Test Type</th>
-                <th>Date</th>
-                <th>Message</th>
-                <th></th>
+                <th>Supplier ID</th>
+                <th>Supplier Name</th>
+                <th>Contact No</th>
+                <th>Address</th>
+                <th>Email</th>
+                <th>Notes</th>
+                <th>Quotation Documents</th>
+                <th>Status</th>
             </tr>
         </thead>
         <tbody>

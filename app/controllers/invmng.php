@@ -132,6 +132,39 @@
             $this->view("invmng/quotations" , $data);
         }
 
+        public function addInventory(){
+            if(!isset($_SESSION['userid'])){
+                header("location: http://localhost/labora/user/logout");
+            }
+            // }else{
+            //     if((time()-$_SESSION['last_login_timestamp'])>600){
+            //         header("location: http://localhost/labora/user/logout");
+            //     }else{
+            //         $_SESSION['last_login_timestamp'] = time();
+            //     }
+            // }
+
+            $data = [];
+            $this->view("invmng/addInventory" , $data);
+        }
+        public function viewInventory(){
+            if(!isset($_SESSION['userid'])){
+                header("location: http://localhost/labora/user/logout");
+            }
+            // }else{
+            //     if((time()-$_SESSION['last_login_timestamp'])>600){
+            //         header("location: http://localhost/labora/user/logout");
+            //     }else{
+            //         $_SESSION['last_login_timestamp'] = time();
+            //     }
+            // }
+
+            $data = [];
+            $this->view("invmng/viewInventory" , $data);
+        }
+
+
+
 
         
     }

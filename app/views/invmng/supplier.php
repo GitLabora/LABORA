@@ -42,43 +42,39 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>REF-001</td>
-                <td>Type A</td>
-                <td>2023-10-29</td>
-                <td>Sample comment</td>
-                <td><button type="submit" class="submit button">View</button></a>
+        <tr>
+        <td>1</td>
+        <td>101</td>
+        <td>ABC Electronics</td>
+        <td>+1 555-123-4567</td>
+        <td>123 Main St, City, ST</td>
+        <td>john.smith@email.com</td>
+        <td>Primary supplier for electronic components.</td>
+        <td><button type="submit" class="submit button">View</button></a>
                 </td>
-                
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>REF-002</td>
-                <td>Type B</td>
-                <td>2023-10-30</td>
-                <td>Another comment</td>
-                <td><button type="submit" class="submit button">View</button></a>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>102</td>
+        <td>XYZ Supplies</td>
+        <td>+1 555-987-6543</td>
+        <td>456 Oak Ave, Town, ST</td>
+        <td>sarah.johnson@email.com</td>
+        <td>Provides various office supplies.</td>
+        <td><button type="submit" class="submit button">View</button></a>
                 </td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>REF-002</td>
-                <td>Type B</td>
-                <td>2023-10-30</td>
-                <td>Another comment</td>
-                <td><button type="submit" class="submit button">View</button></a>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>103</td>
+        <td>JKL Manufacturing</td>
+        <td>+1 555-321-7890</td>
+        <td>789 Elm Rd, Village, ST</td>
+        <td>mike.brown@email.com</td>
+        <td>Specializes in custom parts.</td>
+        <td><button type="submit" class="submit button">View</button></a>
                 </td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>REF-002</td>
-                <td>Type B</td>
-                <td>2023-10-30</td>
-                <td>Another comment</td>
-                <td><button type="submit" class="submit button">View</button></a>
-                </td>
-            </tr>
+    </tr>
             
             <!-- Add more rows as needed -->
         </tbody>

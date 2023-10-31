@@ -151,3 +151,10 @@ button.submit:hover {
 {
     color: var(--darkblue);
 }
+
+
+.detailList  {
+    color: #032345;
+    padding: 10px;
+    font-size: 20px;
+}

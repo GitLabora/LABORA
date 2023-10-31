@@ -36,69 +36,54 @@
         <div>
         <table>
         <thead>
-            <tr>
-                <th>Index</th>
-                <th>Ref No</th>
-                <th>Supplier</th>
-                <th></th>
-            </tr>
+        <tr>
+        <th>Purchase Order ID</th>
+        <th>Supplier Name</th>
+        <th>Order Date</th>
+        <th>Expected Delivery Date</th>
+        <th>Total Cost</th>
+        <th>Status</th>
+        <th>Admin Approval</th>
+        <th>Items Ordered</th>
+        <th>GRN (Goods Received Note) Number</th>
+        <th>Invoices</th>
+        
+    </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>REF-001</td>
-                <td>Supplier 1</td>
-                <td><button type="submit" class="submit button">View</button></td>
-
-                
-                
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>REF-002</td>
-                <td>Supplier 1</td>
-                <td><button type="submit" class="submit button">View</button></td>
-               
-                
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>REF-002</td>
-                <td>Supplier 1</td>
-                <td><button type="submit" class="submit button">View</button></td>
-             
-              
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>REF-002</td>
-                <td>Supplier 1</td>
-                <td><button type="submit" class="submit button">View</button></td>
-               
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>REF-002</td>
-                <td>Supplier 1</td>
-                <td><button type="submit" class="submit button">View</button></td>
-              
-             
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>REF-002</td>
-                <td>Supplier 1</td>
-                <td><button type="submit" class="submit button">View</button></td>
-               
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>REF-002</td>
-                <td>Supplier 1</td>
-                <td><button type="submit" class="submit button">View</button></td>
-                
-             
-            </tr>
+        
+    <tr>
+        <td>PO-001</td>
+        <td>ABC Electronics</td>
+        <td>2023-10-15</td>
+        <td>2023-10-30</td>
+        <td>$5,000</td>
+        <td>Pending</td>
+        <td>Pending</td>
+        
+        <td><button type="submit" class="submit button">View</button></a>
+                </td>
+       
+        <td>GRN-001</td>
+        <td><a href="link-to-invoice-001.pdf">Invoice 001</a></td>
+        
+    </tr>
+    <tr>
+        <td>PO-002</td>
+        <td>XYZ Supplies</td>
+        <td>2023-11-05</td>
+        <td>2023-11-20</td>
+        <td>$1,500</td>
+        <td>Confirmed</td>
+        <td>Approved</td>
+        
+        <td><button type="submit" class="submit button">View</button></a>
+                </td>
+       
+        <td>GRN-002</td>
+        <td><a href="link-to-invoice-002.pdf">Invoice 002</a></td>
+    </tr>
+            
             <!-- Add more rows as needed -->
         </tbody>
         </table>

@@ -37,8 +37,8 @@
                 <th>Address</th>
                 <th>Email</th>
                 <th>Notes</th>
-                <th>Quotation Documents</th>
-                <th>Status</th>
+                <th></th>
+                
             </tr>
         </thead>
         <tbody>
@@ -48,7 +48,7 @@
                 <td>Type A</td>
                 <td>2023-10-29</td>
                 <td>Sample comment</td>
-                <td><a href="#" class="download"><ion-icon name="cube"></ion-icon></a>
+                <td><button type="submit" class="submit button">View</button></a>
                 </td>
                 
             </tr>
@@ -58,7 +58,7 @@
                 <td>Type B</td>
                 <td>2023-10-30</td>
                 <td>Another comment</td>
-                <td><a href="#" class="download"><ion-icon name="cube"></ion-icon></a>
+                <td><button type="submit" class="submit button">View</button></a>
                 </td>
             </tr>
             <tr>
@@ -67,7 +67,7 @@
                 <td>Type B</td>
                 <td>2023-10-30</td>
                 <td>Another comment</td>
-                <td><a href="#" class="download"><ion-icon name="cube"></ion-icon></a>
+                <td><button type="submit" class="submit button">View</button></a>
                 </td>
             </tr>
             <tr>
@@ -76,36 +76,10 @@
                 <td>Type B</td>
                 <td>2023-10-30</td>
                 <td>Another comment</td>
-                <td><a href="#" class="download"><ion-icon name="cube"></ion-icon></a>
+                <td><button type="submit" class="submit button">View</button></a>
                 </td>
             </tr>
-            <tr>
-                <td>2</td>
-                <td>REF-002</td>
-                <td>Type B</td>
-                <td>2023-10-30</td>
-                <td>Another comment</td>
-                <td><a href="#" class="download"><ion-icon name="cube"></ion-icon></a>
-                </td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>REF-002</td>
-                <td>Type B</td>
-                <td>2023-10-30</td>
-                <td>Another comment</td>
-                <td><a href="#" class="download"><ion-icon name="cube"></ion-icon></a>
-                </td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>REF-002</td>
-                <td>Type B</td>
-                <td>2023-10-30</td>
-                <td>Another comment</td>
-                <td><a href="#" class="download"><ion-icon name="cube"></ion-icon></a>
-                </td>
-            </tr>
+            
             <!-- Add more rows as needed -->
         </tbody>
         </table>

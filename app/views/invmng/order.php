@@ -61,7 +61,7 @@
         <td>Pending</td>
         <td>Pending</td>
         
-        <td><a href="#" ><button>View</button></a>
+        <td><button type="submit" class="submit button">View</button></a></a>
                 </td>
        
        
@@ -77,7 +77,7 @@
         <td>Confirmed</td>
         <td>Approved</td>
         
-        <td><a href="#" ><button>View</button></a>
+        <td><button type="submit" class="submit button">View</button></a>
                 </td>
        
        

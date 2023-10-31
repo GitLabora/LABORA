@@ -21,88 +21,48 @@
             <h3>Expired Chemical Details</h3>
         </div>
         <div class="line"></div>
-        <div class="searchbar">
-            <input type="text" class="search" placeholder="Enter Item Name">
-            <a href="#" class="searchbtn">Search</a>
-        </div>
-
+        
+        
         <div>
         <table>
         <thead>
-            <tr>
-                <th>Index</th>
-                <th>Ref No</th>
-                <th>Test Type</th>
-                <th>Date</th>
-                <th>Message</th>
-                <th></th>
-            </tr>
+        <tr>
+        <th>Item ID</th>
+        <th>Item Name</th>
+       
+        <th>Sub ID</th>
+        <th>Expired Quantity</th>
+        <th>Added Date</th>
+        <th>Action</th>
+    </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>REF-001</td>
-                <td>Type A</td>
-                <td>2023-10-29</td>
-                <td>Sample comment</td>
-                <td>
-                <a href="#" class="delete"><ion-icon name="trash"></ion-icon></a></td>
-                
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>REF-002</td>
-                <td>Type B</td>
-                <td>2023-10-30</td>
-                <td>Another comment</td>
-                <td>
-                <a href="#" class="delete"><ion-icon name="trash"></ion-icon></a></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>REF-002</td>
-                <td>Type B</td>
-                <td>2023-10-30</td>
-                <td>Another comment</td>
-                <td>
-                <a href="#" class="delete"><ion-icon name="trash"></ion-icon></a></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>REF-002</td>
-                <td>Type B</td>
-                <td>2023-10-30</td>
-                <td>Another comment</td>
-                <td>
-                <a href="#" class="delete"><ion-icon name="trash"></ion-icon></a></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>REF-002</td>
-                <td>Type B</td>
-                <td>2023-10-30</td>
-                <td>Another comment</td>
-                <td>
-                <a href="#" class="delete"><ion-icon name="trash"></ion-icon></a></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>REF-002</td>
-                <td>Type B</td>
-                <td>2023-10-30</td>
-                <td>Another comment</td>
-                <td>
-                <a href="#" class="delete"><ion-icon name="trash"></ion-icon></a></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>REF-002</td>
-                <td>Type B</td>
-                <td>2023-10-30</td>
-                <td>Another comment</td>
-                <td>
-                <a href="#" class="delete"><ion-icon name="trash"></ion-icon></a></td>
-            </tr>
+        
+    <tr>
+        <td>1001</td>
+        <td>Chemical A</td>
+        
+        <td>11A</td>
+        <td>5</td>
+        <td>2022-11-15</td>
+        <td><a href="#" class="delete"><ion-icon name="trash"></ion-icon></a></td>
+    </tr>
+    <tr>
+        <td>1002</td>
+        <td>Chemical B</td>
+        <td>42D</td>
+        <td>10</td>
+        <td>2022-12-05</td>
+        <td><a href="#" class="delete"><ion-icon name="trash"></ion-icon></a></td>
+    </tr>
+    <tr>
+        <td>1003</td>
+        <td>Chemical D</td>
+        <td>12S</td>
+        <td>10</td>
+        <td>2021-12-09</td>
+        <td><a href="#" class="delete"><ion-icon name="trash"></ion-icon></a></td>
+    </tr>
             <!-- Add more rows as needed -->
         </tbody>
         </table>

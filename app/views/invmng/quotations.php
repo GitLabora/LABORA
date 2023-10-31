@@ -22,7 +22,7 @@
         </div>
         <div class="line"></div>
         <div class="searchbar">
-            <input type="text" class="search" placeholder="Enter Item Name">
+            <input type="text" class="search" placeholder="Enter Order ID">
             <a href="#" class="searchbtn">Search</a>
         </div>
 

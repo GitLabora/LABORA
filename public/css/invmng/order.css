@@ -25,7 +25,9 @@ tbody tr:hover .delete{
     color: white;
 }
 
-
+.td a{
+    text-decoration: none;
+}
 .tablename {
     color: #007bff;
     padding: 10px;

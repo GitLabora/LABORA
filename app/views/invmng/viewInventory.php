@@ -18,9 +18,17 @@
     <div class="container_1">
 
         <div class="tablename">
-            <h3>Inventory Item: </h3>
+            <h3>Inventory Item Details</h3>
         </div>
         <div class="line"></div>
+
+        <div class="detailList">
+            <h5>Item Name</h5><input type="Text">
+        </div>
+
+        <div class="detailList">
+            <h5>Re Order Limit</h5><input type="Text">
+        </div>
 
 
         <table>

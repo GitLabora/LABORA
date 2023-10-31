@@ -36,7 +36,7 @@
                 <th>Quantity in Stock</th>
                 <th>Date Added</th>
                 <th>Expiery Date</th>
-                <th></th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -44,18 +44,26 @@
         <td>1</td>
         <td>11A</td>
         <td>Supplier A</td>
+        <td>12</td>
         <td>2022-12-1</td>
         <td>2024-12-1</td>
-        <td><a href="#" class="download"><ion-icon name="cart"></ion-icon><button type="submit" class="submit button">Delete</button></a>
+        <td><a href="#" class="download"><ion-icon name="add"></ion-icon>
+        <a href="#" class="download"><ion-icon name="pencil">
+        <a href="#" class="download">
+        </ion-icon><ion-icon name="trash"></ion-icon>
                 </td>
+                
     </tr>
     <tr>
         <td>2</td>
         <td>11B</td>
         <td>Supplier D</td>
+        <td>57</td>
         <td>2022-12-1</td>
         <td>2025-12-1</td>
-        <td><a href="#" class="download"><ion-icon name="cart"><button type="submit" class="submit button">Delete</button></ion-icon></a>
+        <td><a href="#" class="download"><ion-icon name="add"></ion-icon>
+        <a href="#" class="download"><ion-icon name="pencil"></ion-icon>
+        <a href="#" class="download"><ion-icon name="trash"></ion-icon>
                 </td>
     </tr>
    

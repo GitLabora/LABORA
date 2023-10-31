@@ -22,14 +22,6 @@
         </div>
         <div class="line"></div>
 
-        <div class="detailList">
-            <h4>Item Name</h4><h5>Item Name</h5>
-        </div>
-
-        <div class="detailList">
-            <h4>Re-Order Limit</h4><h5>Item Name</h5>
-        </div>
-
 
         <table>
         <thead>

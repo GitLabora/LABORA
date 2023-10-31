@@ -14,7 +14,7 @@
     <title>Inventory Manager dashboard</title>
 </head>
 <body>
-<?php require_once 'components/dashnavbar.php' ?>
+<?php require_once 'components/invnavbar.php' ?>
     <div class="container_1">
 
         <div class="tablename">

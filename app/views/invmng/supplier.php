@@ -37,7 +37,7 @@
                 <th>Address</th>
                 <th>Email</th>
                 <th>Notes</th>
-                <th></th>
+                <th>Supplier Items</th>
                 
             </tr>
         </thead>
@@ -46,7 +46,7 @@
         <td>1</td>
         <td>101</td>
         <td>ABC Electronics</td>
-        <td>+1 555-123-4567</td>
+        <td>+94 -123-4567</td>
         <td>123 Main St, City, ST</td>
         <td>john.smith@email.com</td>
         <td>Primary supplier for electronic components.</td>
@@ -57,7 +57,7 @@
         <td>2</td>
         <td>102</td>
         <td>XYZ Supplies</td>
-        <td>+1 555-987-6543</td>
+        <td>+94 -987-6543</td>
         <td>456 Oak Ave, Town, ST</td>
         <td>sarah.johnson@email.com</td>
         <td>Provides various office supplies.</td>
@@ -68,7 +68,7 @@
         <td>3</td>
         <td>103</td>
         <td>JKL Manufacturing</td>
-        <td>+1 555-321-7890</td>
+        <td>+94 -321-7890</td>
         <td>789 Elm Rd, Village, ST</td>
         <td>mike.brown@email.com</td>
         <td>Specializes in custom parts.</td>

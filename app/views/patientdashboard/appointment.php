@@ -54,105 +54,22 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>AP12345</td>
-                <td>Check-up</td>
-                <td>2023-11-15</td>
-                <td>10:00 AM</td>
-                <td>30 minutes</td>
-                <td>Scheduled</td>
-                <td>Reminder call sent</td>
-                <td><button class="cancel">Cancel</button></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>AP54321</td>
-                <td>MRI Scan</td>
-                <td>2023-11-20</td>
-                <td>02:30 PM</td>
-                <td>1 hour</td>
-                <td>Completed</td>
-                <td>N/A</td>
-                <td><button class="cancel del">Delete</button></td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>AP98765</td>
-                <td>Dental Check-up</td>
-                <td>2023-11-25</td>
-                <td>09:15 AM</td>
-                <td>45 minutes</td>
-                <td>Canceled</td>
-                <td>Patient rescheduled</td>
-                <td><button class="cancel del">Delete</button></td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>AP12345</td>
-                <td>Check-up</td>
-                <td>2023-11-15</td>
-                <td>10:00 AM</td>
-                <td>30 minutes</td>
-                <td>Scheduled</td>
-                <td>Reminder call sent</td>
-                <td><button class="cancel">Cancel</button></td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>AP54321</td>
-                <td>MRI Scan</td>
-                <td>2023-11-20</td>
-                <td>02:30 PM</td>
-                <td>1 hour</td>
-                <td>Completed</td>
-                <td>N/A</td>
-                <td><button class="cancel del">Delete</button></td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>AP98765</td>
-                <td>Dental Check-up</td>
-                <td>2023-11-25</td>
-                <td>09:15 AM</td>
-                <td>45 minutes</td>
-                <td>Canceled</td>
-                <td>Patient rescheduled</td>
-                <td><button class="cancel del">Delete</button></td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>AP12345</td>
-                <td>Check-up</td>
-                <td>2023-11-15</td>
-                <td>10:00 AM</td>
-                <td>30 minutes</td>
-                <td>Scheduled</td>
-                <td>Reminder call sent</td>
-                <td><button class="cancel">Cancel</button></td>
-            </tr>
-            <tr>
-                <td>8</td>
-                <td>AP54321</td>
-                <td>MRI Scan</td>
-                <td>2023-11-20</td>
-                <td>02:30 PM</td>
-                <td>1 hour</td>
-                <td>Completed</td>
-                <td>N/A</td>
-                <td><button class="cancel del">Delete</button></td>
-            </tr>
-            <tr>
-                <td>9</td>
-                <td>AP98765</td>
-                <td>Dental Check-up</td>
-                <td>2023-11-25</td>
-                <td>09:15 AM</td>
-                <td>45 minutes</td>
-                <td>Canceled</td>
-                <td>Patient rescheduled</td>
-                <td><button class="cancel del">Delete</button></td>
-            </tr>
+            <?php
+            foreach ($data as $row) {
+                echo '<tr>
+                <td>'.$row['Id'].'</td>
+                <td>'.$row['Ref_No'].'</td>
+                <td>'.$row['Test_Type'].'</td>
+                <td>'.$row['Appointment_Date'].'</td>
+                <td>'.$row['Appointment_Time'].'</td>
+                <td>'.$row['Appointment_Duration'].'</td>
+                <td>'.$row['Appointment_Status'].'</td>
+                <td>'.$row['Appointment_Notes'].'</td>
+                <td><a href="http://localhost/labora/PatientDashboard/cancelAppointment/'.$row['Id'].'" class="cancel">Cancel</a></td>
+            </tr>';
+            }
+            ?>
+            
             <!-- Add more rows as needed -->
         </tbody>
         </table>

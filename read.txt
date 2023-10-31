@@ -12,3 +12,5 @@ birthday passe date danna birthday
 phone number validated
 form validation
 appointment eka danna puluwan issaraha date walata witharai
+appointment eka his thiyanna puluwan wenna one
+flash msg danna

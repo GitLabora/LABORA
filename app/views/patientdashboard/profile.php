@@ -24,31 +24,31 @@
             <form action="" method="post">
                 <div class="input">
                     <label for="fullname">Fullname:</label><br>
-                    <input type="text" id="fullname" name="fullname" placeholder="Buddhi Nadeeshan" required>
+                    <input type="text" id="fullname" name="fullname" placeholder="<?php echo $data['fullname']?>" required>
                 </div>
 
                 <div class="input">
                     <label for="email">Email:</label><br>
-                    <input type="email" id="email" name="email" placeholder="buddhinadeeshan@gmail.com" disabled>
+                    <input type="email" id="email" name="email" placeholder="<?php echo $data['email']?>" disabled>
                 </div>
 
                 <div class="input">
                     <div class="input-3-1">
                         <label for="phone">Phone:</label><br>
-                        <input type="tel" id="phone" name="phone" placeholder="0785678765" required>
+                        <input type="tel" id="phone" name="phone" placeholder="<?php echo $data['phone']?>" required>
                     </div>
                     <div class="input-3-1">
                         <label for="dob">Date of Birth:</label><br>
-                        <input type="date" id="dob" name="dob" placeholder="2000-09-07" required>
+                        <input type="date" id="dob" name="dob" placeholder="<?php echo $data['dob']?>" required>
                     </div>
                 </div>
                 <div class="input">
                     <label for="address">Address:</label><br>
-                    <textarea id="address" name="address" placeholder="123 Main Street,Apt 4BCityville, ST 12345,United States" required></textarea>
+                    <textarea id="address" name="address" placeholder="<?php echo $data['address']?>" required></textarea>
                 </div>
                 <div class="input">
-                    <a href="">Cancel</a>
-                    <button type="submit" name="submit">Login</button>
+                    <a href="http://localhost/labora/PatientDashboard/dashboard">Cancel</a>
+                    <button type="submit" name="submit">Save</button>
                 </div>
                 
             </form>

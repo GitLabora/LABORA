@@ -56,5 +56,29 @@
                     return $user;
                 }
             }
+
+            public function changeName($email , $name){
+                $result = mysqli_query($this->conn , "UPDATE patient_data
+                SET patient_name = '$name'
+                WHERE patient_email = '$email'");
+            }
+
+            public function changePhone($email , $phone){
+                $result = mysqli_query($this->conn , "UPDATE patient_data
+                SET patient_phone = '$phone'
+                WHERE patient_email = '$email'");
+            }
+
+            public function changeDob($email , $dob){
+                $result = mysqli_query($this->conn , "UPDATE patient_data
+                SET patient_dob = '$dob'
+                WHERE patient_email = '$email'");
+            }
+
+            public function changeAddress($email , $address){
+                $result = mysqli_query($this->conn , "UPDATE patient_data
+                SET patient_address = '$address'
+                WHERE patient_email = '$email'");
+            }
     }
 ?>

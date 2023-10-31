@@ -1,7 +1,13 @@
 <?php
     class PatientDashboard extends Controller{
-        public function __construct(){
+        private $md_appointment;
+        private $md_testtype;
 
+        private $md_user;
+        public function __construct(){
+            $this->md_appointment = $this->model('M_appointment');
+            $this->md_testtype = $this->model('M_testtype');
+            $this->md_user = $this->model('M_user');
         }
 
         public function index(){
@@ -47,9 +53,24 @@
             //         $_SESSION['last_login_timestamp'] = time();
             //     }
             // }
-
-            $data = [];
+            
+            $data = array();
+            $result = $this->md_appointment->getRow();
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    // Add each row as an associative array to the $data array
+                    $data[] = $row;
+                }
+            }else{
+                $data = [
+                    'Id'=> "",
+                    'Ref_no' => '',
+                ];
+                $this->view("patientdashboard/appointment" , $data);
+            }
+            
             $this->view("patientdashboard/appointment" , $data);
+            
         }
 
         public function dashboard(){
@@ -66,22 +87,6 @@
 
             $data = [];
             $this->view("patientdashboard/dashboard" , $data);
-        }
-
-        public function profile(){
-            if(!isset($_SESSION['userid'])){
-                header("location: http://localhost/labora/user/logout");
-            }
-            // }else{
-            //     if((time()-$_SESSION['last_login_timestamp'])>600){
-            //         header("location: http://localhost/labora/user/logout");
-            //     }else{
-            //         $_SESSION['last_login_timestamp'] = time();
-            //     }
-            // }
-
-            $data = [];
-            $this->view("patientdashboard/profile" , $data);
         }
 
         public function medicaltest(){
@@ -111,9 +116,114 @@
             //         $_SESSION['last_login_timestamp'] = time();
             //     }
             // }
+            $data = [
+                'dateerr' => ""
+            ];
 
-            $data = [];
+            if($_SERVER['REQUEST_METHOD']=="POST"){
+                $currentDate = date('Y-m-d');
+
+                $_POST = filter_input_array(INPUT_POST , FILTER_SANITIZE_STRING);
+
+                $test_type = trim($_POST['test-type']);
+                $appointment_date = trim($_POST['appointment-date']);
+                $appointment_time = trim($_POST['appointment-time']);
+                $appointment_notes = trim($_POST['appointment-notes']);
+
+                $data = [
+                    'dateerr' => ""
+                ];
+
+                $today = new DateTime($currentDate);
+                $appday = new DateTime($appointment_date);
+
+                if($appday < $today){
+                    $data = [
+                        'dateerr' => "Enter valid date"
+                    ];
+                }
+
+                if(empty($data["dateerr"])){
+                $formattedNumber = str_pad($this->md_appointment->getNextId(), 4, '0', STR_PAD_LEFT);
+
+                $refno = 'LB-'.$formattedNumber;
+                
+                $appointment_duration = $this->md_testtype->getDuration($test_type);
+                
+                $appointment_status = "Scheduled";
+
+                $this->md_appointment->enterAppointmentData($refno,$test_type,$appointment_date,$appointment_time,$appointment_duration,$appointment_status,$appointment_notes);
+                }
+
+
+            }else{
+                
+            }
             $this->view("patientdashboard/appointment_form" , $data);
+
+            stopResubmission();
+        }
+
+        public function cancelAppointment($id){
+            if(!isset($_SESSION['userid'])){
+                header("location: http://localhost/labora/user/logout");
+            }
+            // }else{
+            //     if((time()-$_SESSION['last_login_timestamp'])>600){
+            //         header("location: http://localhost/labora/user/logout");
+            //     }else{
+            //         $_SESSION['last_login_timestamp'] = time();
+            //     }
+            // }
+            $data=[];
+            $this->md_appointment->cancelAppointment($id);
+            $this->appointment();
+        }
+
+        public function editProfile(){
+            if(!isset($_SESSION['userid'])){
+                header("location: http://localhost/labora/user/logout");
+            }
+            // }else{
+            //     if((time()-$_SESSION['last_login_timestamp'])>600){
+            //         header("location: http://localhost/labora/user/logout");
+            //     }else{
+            //         $_SESSION['last_login_timestamp'] = time();
+            //     }
+            // }
+
+
+            if($_SERVER['REQUEST_METHOD']=="POST"){
+                $_POST = filter_input_array(INPUT_POST , FILTER_SANITIZE_STRING);
+
+                $data = [
+                    'fullname' => trim($_POST['fullname']),
+                    'email' => $_SESSION['useremail'],
+                    'phone' => trim($_POST['phone']),
+                    'dob' => trim($_POST['dob']),
+                    'address' => trim($_POST['address'])
+                ];
+
+                $this->md_user->changeName($data['email'] , $data['fullname']);
+                $this->md_user->changePhone($data['email'] , $data['phone']);
+                $this->md_user->changeDob($data['email'] , $data['dob']);
+                $this->md_user->changeAddress($data['email'] , $data['address']);
+
+            }else{
+                $current_user=$this->md_user->getUser( $_SESSION['useremail']);
+                $data = [
+                    'fullname' => $current_user['patient_name'],
+                    'email' => $_SESSION['useremail'],
+                    'phone' => $current_user['patient_phone'],
+                    'dob' => $current_user['patient_dob'],
+                    'address' => $current_user['patient_address'],
+                ];
+            }
+
+            $this->view('patientdashboard/profile' , $data);
+
+            //for avoiding form resubmission
+            stopResubmission();
         }
     }
 ?>

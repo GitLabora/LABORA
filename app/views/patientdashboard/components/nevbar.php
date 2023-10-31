@@ -45,7 +45,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="http://localhost/labora/PatientDashboard/profile">
+                    <a href="http://localhost/labora/PatientDashboard/editProfile">
                     <span class="icon"><ion-icon name="person"></ion-icon></span>
                     <span class="title">Profile</span>
                     </a>

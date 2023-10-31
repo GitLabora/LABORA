@@ -17,25 +17,33 @@
     <?php require_once 'components/nevbar.php' ?>
     <div class="container_1">
     <h1>Schedule Appointment</h1>
-    <form class="appointment-form">
+    <form action="<?php echo URLROOT?>PatientDashboard/appointment_form" method="post" class="appointment-form">
         <div class="form-group">
-            <label for="test-type">Test Type:</label>
-            <input type="text" id="test-type" name="test-type" required>
+            <label for="test-type">Test Type</label>
+            <select id="test-type" name="test-type" required>
+                <option value="Complete Blood Count (CBC)">Complete Blood Count (CBC)</option>
+                <option value="Lipid Profile">Lipid Profile</option>
+                <option value="Blood Glucose Test">Blood Glucose Test</option>
+                <option value="Urinalysis">Urinalysis</option>
+                <option value="Bone Density Scan (DXA)">Bone Density Scan (DXA)</option>
+                <option value="X-Ray (Radiography)">X-Ray (Radiography)</option>
+                <option value="Electrocardiogram (ECG or EKG)">Electrocardiogram (ECG or EKG)</option>
+                <option value="Blood Pressure Measurement">Blood Pressure Measurement</option>
+                <option value="MRI (Magnetic Resonance Imaging)">MRI (Magnetic Resonance Imaging)</option>
+                <option value="Pap Smear">Pap Smear</option>
+            </select>
         </div>
         <div class="form-group">
-            <label for="appointment-date">Appointment Date:</label>
-            <input type="date" id="appointment-date" name="appointment-date" required>
+            <label for="appointment-date">Appointment Date</label>
+            <input type="date" id="appointment-date" name="appointment-date" required><br>
+            <span class="dateerr"><?php echo $data['dateerr'];?></span>
         </div>
         <div class="form-group">
-            <label for="appointment-time">Appointment Time:</label>
+            <label for="appointment-time">Appointment Time</label>
             <input type="time" id="appointment-time" name="appointment-time" required>
         </div>
         <div class="form-group">
-            <label for="appointment-duration">Appointment Duration (in minutes):</label>
-            <input type="number" id="appointment-duration" name="appointment-duration" required>
-        </div>
-        <div class="form-group">
-            <label for="appointment-notes">Appointment Notes:</label>
+            <label for="appointment-notes">Appointment Notes</label>
             <textarea id="appointment-notes" name="appointment-notes" rows="4"></textarea>
         </div>
         <button type="submit" class="button">Submit</button>

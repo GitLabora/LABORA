@@ -101,16 +101,17 @@ button.submit:hover {
 
 /* table button */
 
-button.cancel {
+a.cancel {
     background-color: #007bff;
     color: #fff;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 16px;
+    text-decoration: none;
 }
 
-button.cancel:hover {
+a.cancel:hover {
     background-color: #0056b3;
 }
 

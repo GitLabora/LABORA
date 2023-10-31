@@ -75,8 +75,55 @@
     
 }
 
+.container_1 .boxset-2 .input a{
+    
+    
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    border: 1px solid #007a5a;
+    color: #007a5a;
+    font-weight: 700;
+    background: #fff;
+    padding: 8px;
+    font-size: 15px;
+    border-radius: 4px;
+    height: 36px;
+    transition: all 80ms linear;
+    text-decoration: none;
+    margin-right: 10px;
+    width: 120px;
+    text-align: center;
+    
+}
 
+.container_1 .boxset-2 .input a:hover{
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 8%);
+    background: rgba(248,248,248,1);
+}
 
+.container_1 .boxset-2 .input button{
+    
+    display: inline-block;
+    outline: 0;
+    border: none;
+    cursor: pointer;
+    line-height: 1.2rem;
+    font-weight: 900;
+    background: #007a5a;
+    padding: 8px 14px 9px;
+    font-size: 15px;
+    border-radius: 4px;
+    color: #fff;
+    height: 36px;
+    transition: all 75ms ease-in-out;
+    width: 120px; 
+      
+}
+
+.container_1 .boxset-2 .input button:hover{
+    box-shadow: 0 1px 4px rgb(0 0 0 / 30%);
+}
 
 
 

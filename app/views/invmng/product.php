@@ -47,6 +47,8 @@
         <td>25</td>
         <td>10</td>
         <td>$800</td>
+        <td><button type="submit" class="submit button">View</button></a>
+                </td>
     </tr>
     <tr>
         <td>2</td>
@@ -55,6 +57,8 @@
         <td>15</td>
         <td>20</td>
         <td>$1200</td>
+        <td><button type="submit" class="submit button">View</button></a>
+                </td>
     </tr>
     <tr>
         <td>3</td>
@@ -63,6 +67,8 @@
         <td>30</td>
         <td>15</td>
         <td>$250</td>
+        <td><button type="submit" class="submit button">View</button></a>
+                </td>
     </tr>
     <tr>
         <td>4</td>
@@ -71,6 +77,8 @@
         <td>50</td>
         <td>30</td>
         <td>$30</td>
+        <td><button type="submit" class="submit button">View</button></a>
+                </td>
     </tr>
             <!-- Add more rows as needed -->
         </tbody>

@@ -29,80 +29,34 @@
         <div>
         <table>
         <thead>
-            <tr>
-                <th>Index</th>
-                <th>Ref No</th>
-                <th>Test Type</th>
-                <th>Date</th>
-                <th>Message</th>
-                <th></th>
-            </tr>
+        <tr>
+        <th>Order ID</th>
+        <th>Supplier Name</th>
+        <th>Quotation Document</th>
+        <th>Invoice Document</th>
+        <th>Invoice Date</th>
+        <th>Action</th>
+    </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>REF-001</td>
-                <td>Type A</td>
-                <td>2023-10-29</td>
-                <td>Sample comment</td>
-                <td><a href="#" class="download"><ion-icon name="search"></ion-icon></a>
-                </td>
-                
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>REF-002</td>
-                <td>Type B</td>
-                <td>2023-10-30</td>
-                <td>Another comment</td>
-                <td><a href="#" class="download"><ion-icon name="search"></ion-icon></a>
-                </td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>REF-002</td>
-                <td>Type B</td>
-                <td>2023-10-30</td>
-                <td>Another comment</td>
-                <td><a href="#" class="download"><ion-icon name="search"></ion-icon></a>
-                </td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>REF-002</td>
-                <td>Type B</td>
-                <td>2023-10-30</td>
-                <td>Another comment</td>
-                <td><a href="#" class="download"><ion-icon name="search"></ion-icon></a>
-                </td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>REF-002</td>
-                <td>Type B</td>
-                <td>2023-10-30</td>
-                <td>Another comment</td>
-                <td><a href="#" class="download"><ion-icon name="search"></ion-icon></a>
-                </td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>REF-002</td>
-                <td>Type B</td>
-                <td>2023-10-30</td>
-                <td>Another comment</td>
-                <td><a href="#" class="download"><ion-icon name="search"></ion-icon></a>
-                </td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>REF-002</td>
-                <td>Type B</td>
-                <td>2023-10-30</td>
-                <td>Another comment</td>
-                <td><a href="#" class="download"><ion-icon name="search"></ion-icon></a>
-                </td>
-            </tr>
+      
+    <tr>
+        <td>PO-001</td>
+        <td>ABC Electronics</td>
+        <td><a href="supplier_quotation_001.pdf">Supplier Quotation 001</a></td>
+        <td><a href="supplier_invoice_001.pdf">Supplier Invoice 001</a></td>
+        <td>2023-10-25</td>
+        <td><a href="#" class="download"><ion-icon name="search"></ion-icon></a></td>
+    </tr>
+    <tr>
+        <td>PO-002</td>
+        <td>XYZ Supplies</td>
+        <td><a href="supplier_quotation_002.pdf">Supplier Quotation 002</a></td>
+        <td><a href="supplier_invoice_002.pdf">Supplier Invoice 002</a></td>
+        <td>2023-11-15</td>
+        <td><a href="#" class="download"><ion-icon name="search"></ion-icon></a></td>
+    </tr>
+          
             <!-- Add more rows as needed -->
         </tbody>
         </table>

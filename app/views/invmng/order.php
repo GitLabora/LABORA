@@ -45,7 +45,7 @@
         <th>Status</th>
         <th>Admin Approval</th>
         <th>Items Ordered</th>
-        <th>GRN (Goods Received Note) Number</th>
+        
         <th>Invoices</th>
         
     </tr>
@@ -64,7 +64,7 @@
         <td><button type="submit" class="submit button">View</button></a>
                 </td>
        
-        <td>GRN-001</td>
+       
         <td><a href="link-to-invoice-001.pdf">Invoice 001</a></td>
         
     </tr>
@@ -80,7 +80,7 @@
         <td><button type="submit" class="submit button">View</button></a>
                 </td>
        
-        <td>GRN-002</td>
+       
         <td><a href="link-to-invoice-002.pdf">Invoice 002</a></td>
     </tr>
             

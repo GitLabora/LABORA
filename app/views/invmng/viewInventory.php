@@ -23,11 +23,11 @@
         <div class="line"></div>
 
         <div class="detailList">
-            <h5>Item Name</h5><input type="Text">
+            <h4>Item Name</h4><h5>Item Name</h5>
         </div>
 
         <div class="detailList">
-            <h5>Re Order Limit</h5><input type="Text">
+            <h4>Re-Order Limit</h4><h5>Item Name</h5>
         </div>
 
 

@@ -45,7 +45,7 @@
         <div class="boxset-2">
             <div class="message box-1">
 
-                <h1>CSS Calendar</h1>
+                <h1>Calendar</h1>
 
                 <div class="month">      
                 <ul>
@@ -104,8 +104,8 @@
             </div>
             <div class="notify box-2">
             <div class="notification-box">
-                <h2>New Message</h2>
-                <p>You have a new message in your inbox. Click below to read it.</p>
+                <h2>Notification</h2>
+                <p>You have a new notification in your Notification Box. Click below to read it.</p>
                 <p class="timestamp">Received 3 hours ago</p>
             </div>
             </div>

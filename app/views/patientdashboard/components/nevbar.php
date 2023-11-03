@@ -33,7 +33,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="http://localhost/labora/PatientDashboard/reports">
+                    <a href="http://localhost/labora/PatientDashboard/report">
                     <span class="icon"><ion-icon name="reader"></ion-icon></span>
                     <span class="title">Medical reports</span>
                     </a>

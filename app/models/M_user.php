@@ -57,6 +57,14 @@
                 }
             }
 
+            public function getUserName($email){
+                $result =mysqli_query($this->conn , "SELECT * FROM patient_data WHERE patient_email='$email'") ;
+                if(mysqli_num_rows($result)>0){
+                    $user = mysqli_fetch_assoc($result);
+                    return $user['patient_name'];
+                }
+            }
+
             public function changeName($email , $name){
                 $result = mysqli_query($this->conn , "UPDATE patient_data
                 SET patient_name = '$name'
@@ -79,6 +87,11 @@
                 $result = mysqli_query($this->conn , "UPDATE patient_data
                 SET patient_address = '$address'
                 WHERE patient_email = '$email'");
+            }
+
+            public function getRow(){
+                $result =mysqli_query($this->conn , "SELECT * FROM patient_data") ;
+                return $result;       
             }
     }
 ?>

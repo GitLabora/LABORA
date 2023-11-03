@@ -48,70 +48,20 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>REF-001</td>
-                <td>Type A</td>
-                <td>2023-10-29</td>
-                <td>Sample comment</td>
-                <td><a href="#" class="download"><ion-icon name="arrow-down-circle"></ion-icon></a>
-                <a href="#" class="delete"><ion-icon name="trash"></ion-icon></a></td>
+        <?php
+            $reversedArray = array_reverse($data, true);
+            foreach ($reversedArray as $row) {
+                echo '<tr>
+                <td>'.$row['id'].'</td>
+                <td>'.$row['ref_no'].'</td>
+                <td>'.$row['test_type'].'</td>
+                <td>'.$row['date'].'</td>
+                <td>'.$row['message'].'</td>
+                <td><a href="http://localhost/uploads/'.$row['path'].'" >View</a><a href="http://localhost/labora/PatientDashboard/deleteReport/'.$row['id'].'/'.$row['path'].'">delete</a></td>
                 
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>REF-002</td>
-                <td>Type B</td>
-                <td>2023-10-30</td>
-                <td>Another comment</td>
-                <td><a href="#" class="download"><ion-icon name="arrow-down-circle"></ion-icon></a>
-                <a href="#" class="delete"><ion-icon name="trash"></ion-icon></a></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>REF-002</td>
-                <td>Type B</td>
-                <td>2023-10-30</td>
-                <td>Another comment</td>
-                <td><a href="#" class="download"><ion-icon name="arrow-down-circle"></ion-icon></a>
-                <a href="#" class="delete"><ion-icon name="trash"></ion-icon></a></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>REF-002</td>
-                <td>Type B</td>
-                <td>2023-10-30</td>
-                <td>Another comment</td>
-                <td><a href="#" class="download"><ion-icon name="arrow-down-circle"></ion-icon></a>
-                <a href="#" class="delete"><ion-icon name="trash"></ion-icon></a></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>REF-002</td>
-                <td>Type B</td>
-                <td>2023-10-30</td>
-                <td>Another comment</td>
-                <td><a href="#" class="download"><ion-icon name="arrow-down-circle"></ion-icon></a>
-                <a href="#" class="delete"><ion-icon name="trash"></ion-icon></a></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>REF-002</td>
-                <td>Type B</td>
-                <td>2023-10-30</td>
-                <td>Another comment</td>
-                <td><a href="#" class="download"><ion-icon name="arrow-down-circle"></ion-icon></a>
-                <a href="#" class="delete"><ion-icon name="trash"></ion-icon></a></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>REF-002</td>
-                <td>Type B</td>
-                <td>2023-10-30</td>
-                <td>Another comment</td>
-                <td><a href="#" class="download"><ion-icon name="arrow-down-circle"></ion-icon></a>
-                <a href="#" class="delete"><ion-icon name="trash"></ion-icon></a></td>
-            </tr>
+            </tr>';
+            }
+            ?>
             <!-- Add more rows as needed -->
         </tbody>
         </table>

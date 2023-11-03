@@ -31,7 +31,7 @@
             </div>
             <div class="form-group">
                 <label for="patient_phone">Phone</label><br>
-                <input type="tel" pattern="[0-9]+" maxlength="14"oninvalid="this.setCustomValidity('Accept only numbers')" oninput="setCustomValidity('')" id="patient_phone" name="patient_phone" value="<?php echo $data['phone'];?>" required>
+                <input type="tel" pattern="[0-9]+" maxlength="10" oninvalid="this.setCustomValidity('Accept only numbers')" oninput="setCustomValidity('')" id="patient_phone" name="patient_phone" value="<?php echo $data['phone'];?>" required>
             </div>
             <div class="form-group">
                 <label>Gender</label>
@@ -46,7 +46,7 @@
             </div>
             <div class="form-group">
                 <label for="patient_dob">Date of Birth</label><br>
-                <input type="date" id="patient_dob" name="patient_dob" value="<?php echo $data['dob'];?>" required>
+                <input type="date" id="patient_dob" name="patient_dob" max="2023-11-1" value="<?php echo $data['dob'];?>" required>
             </div>
             <div class="form-group">
                 <label for="patient_address">Address</label><br>

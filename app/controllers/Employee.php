@@ -68,10 +68,20 @@
 
 
         public function createUserSession($user){
-            $_SESSION['empname'] = $user['empname'];
-            $_SESSION['empid'] = $user['empid'];
+            $_SESSION['empname'] = $user['full_name'];
+            $_SESSION['empid'] = $user['id'];
+            $_SESSION['role'] = $user['role'];
             $_SESSION['last_login_timestamp'] = time();
-            header("Location: ".URLROOT."Employee/employee");
+            
+            if($user['role']=='lab_assistant'){
+                header("Location: ".URLROOT."labassistant/");
+            }else if($user['role']=='admin'){
+                header("Location: ".URLROOT."admin/");
+            }else if($user["role"]== "inventory_manager"){
+                header("Location: ".URLROOT."invmng/dashboard");
+            }else if($user["role"]== "receptionist"){
+                header("Location: ".URLROOT."receptionist/dashboard");
+            }
         }
 
         public function logout(){

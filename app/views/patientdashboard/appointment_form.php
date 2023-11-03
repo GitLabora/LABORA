@@ -34,7 +34,7 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="appointment-date">Appointment Date</label>
+            <label for="appointment-date" min="<?php echo date("Y-m-d"); ?>">Appointment Date</label>
             <input type="date" id="appointment-date" name="appointment-date" required><br>
             <span class="dateerr"><?php echo $data['dateerr'];?></span>
         </div>

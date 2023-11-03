@@ -4,10 +4,13 @@
         private $md_testtype;
 
         private $md_user;
+
+        private $md_report;
         public function __construct(){
             $this->md_appointment = $this->model('M_appointment');
             $this->md_testtype = $this->model('M_testtype');
             $this->md_user = $this->model('M_user');
+            $this->md_report = $this->model('M_report');
         }
 
         public function index(){
@@ -23,24 +26,9 @@
             // }
 
             $data = [];
-            $this->view("patientdashboard/Patient" , $data);
+            $this->view("patientdashboard/Dashboard" , $data);
         }
 
-        public function reports(){
-            if(!isset($_SESSION['userid'])){
-                header("location: http://localhost/labora/user/logout");
-            }
-            // }else{
-            //     if((time()-$_SESSION['last_login_timestamp'])>600){
-            //         header("location: http://localhost/labora/user/logout");
-            //     }else{
-            //         $_SESSION['last_login_timestamp'] = time();
-            //     }
-            // }
-
-            $data = [];
-            $this->view("patientdashboard/reports" , $data);
-        }
 
         public function appointment(){
             if(!isset($_SESSION['userid'])){
@@ -55,17 +43,60 @@
             // }
             
             $data = array();
-            $result = $this->md_appointment->getRow();
+            $result = $this->md_appointment->getRowByEmail($_SESSION['useremail']);
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     // Add each row as an associative array to the $data array
                     $data[] = $row;
                 }
             }else{
-                $data = [
+                $data = [[
                     'Id'=> "",
-                    'Ref_no' => '',
-                ];
+                    'Ref_No' => '',
+                    'Test_Type' => '',
+                    'Appointment_Date' => '',
+                    'Appointment_Time'=> '',
+                    'Appointment_Duration'=> '',
+                    'Appointment_Status'=> '',
+                    'Appointment_Notes'=> '',
+                ],];
+                $this->view("patientdashboard/appointment" , $data);
+            }
+            
+            $this->view("patientdashboard/appointment" , $data);
+            
+        }
+
+        public function searchAppointment(){
+            if(!isset($_SESSION['userid'])){
+                header("location: http://localhost/labora/user/logout");
+            }
+            // }else{
+            //     if((time()-$_SESSION['last_login_timestamp'])>600){
+            //         header("location: http://localhost/labora/user/logout");
+            //     }else{
+            //         $_SESSION['last_login_timestamp'] = time();
+            //     }
+            // }
+            
+            $data = array();
+            $result = $this->md_appointment->getRowByEmail($_SESSION['useremail']);
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    // Add each row as an associative array to the $data array
+                    $data[] = $row;
+                }
+            }else{
+                $data = [[
+                    'Id'=> "",
+                    'Ref_No' => '',
+                    'Test_Type' => '',
+                    'Appointment_Date' => '',
+                    'Appointment_Time'=> '',
+                    'Appointment_Duration'=> '',
+                    'Appointment_Status'=> '',
+                    'Appointment_Notes'=> '',
+                ],];
                 $this->view("patientdashboard/appointment" , $data);
             }
             
@@ -150,9 +181,9 @@
                 
                 $appointment_duration = $this->md_testtype->getDuration($test_type);
                 
-                $appointment_status = "Scheduled";
+                $appointment_status = "Pending Approval";
 
-                $this->md_appointment->enterAppointmentData($refno,$test_type,$appointment_date,$appointment_time,$appointment_duration,$appointment_status,$appointment_notes);
+                $this->md_appointment->enterAppointmentData($refno,$test_type,$appointment_date,$appointment_time,$appointment_duration,$appointment_status,$appointment_notes,$_SESSION['useremail']);
                 }
 
 
@@ -177,7 +208,7 @@
             // }
             $data=[];
             $this->md_appointment->cancelAppointment($id);
-            $this->appointment();
+            header("Location: http://localhost/labora/PatientDashboard/appointment");
         }
 
         public function editProfile(){
@@ -224,6 +255,53 @@
 
             //for avoiding form resubmission
             stopResubmission();
+        }
+
+
+        public function report(){
+            if(!isset($_SESSION['userid'])){
+                header("location: http://localhost/labora/user/logout");
+            }
+            // }else{
+            //     if((time()-$_SESSION['last_login_timestamp'])>600){
+            //         header("location: http://localhost/labora/user/logout");
+            //     }else{
+            //         $_SESSION['last_login_timestamp'] = time();
+            //     }
+            // }
+            
+            $data = array();
+            $result = $this->md_report->getRowByEmail($_SESSION['useremail']);
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    // Add each row as an associative array to the $data array
+                    $data[] = $row;
+                }
+            }else{
+                $data = [[
+                    'id'=> "",
+                    'ref_No' => '',
+                    'Test_Type' => '',
+                    'date' => '',
+                    'message'=> '',
+                ],];
+                $this->view("patientdashboard/reports" , $data);
+            }
+            
+            $this->view("patientdashboard/reports" , $data);
+            
+        }
+
+        public function deleteReport($id , $path){ 
+  
+            // Use unlink() function to delete a file 
+            echo $path;
+            if (!unlink('C:\\xampp\\htdocs\\uploads\\'.$path)) { 
+                $this->md_report->deleteFromId($id);
+            }
+            header("location: http://localhost/labora/PatientDashboard/report");
+
+
         }
     }
 ?>

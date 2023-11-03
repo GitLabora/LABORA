@@ -55,7 +55,8 @@
         </thead>
         <tbody>
             <?php
-            foreach ($data as $row) {
+            $reversedArray = array_reverse($data, true);
+            foreach ($reversedArray as $row) {
                 echo '<tr>
                 <td>'.$row['Id'].'</td>
                 <td>'.$row['Ref_No'].'</td>

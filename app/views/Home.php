@@ -18,7 +18,6 @@
                 <li><a href="#aboutUs">About Us</a></li>
                 <li><a href="#contact">Contact Us</a></li>
             </ul>
-            
         <nav>
             <a href="<?php echo URLROOT?>user/login" class="signin-button button">Sign In</a>
         </div>

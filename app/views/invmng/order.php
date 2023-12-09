@@ -61,7 +61,8 @@
         <td>Pending</td>
         <td>Pending</td>
         
-        <td><button class="cancel">View</button></td>
+        <td><button type="submit" class="submit button">View</button></a></a>
+                </td>
        
        
         <td><a href="link-to-invoice-001.pdf">Invoice 001</a></td>
@@ -76,7 +77,8 @@
         <td>Confirmed</td>
         <td>Approved</td>
         
-        <td><button class="cancel">View</button></td>
+        <td><button type="submit" class="submit button">View</button></a>
+                </td>
        
        
         <td><a href="link-to-invoice-002.pdf">Invoice 002</a></td>

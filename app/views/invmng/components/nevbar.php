@@ -69,7 +69,7 @@
                     <ion-icon name="notifications"></ion-icon>
                 </div>
                 <div class="user">
-                    <h4><?php echo $_SESSION['username'];?></h4>
+                    <h4><?php echo $_SESSION['role'].': '.$_SESSION['empname'];?></h4>
                     <img src="/labora/public/img/invmng/user1.jpg" alt="">
                 </div>
             </div>

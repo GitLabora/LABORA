@@ -5,7 +5,7 @@
         }
 
         public function order(){
-            if(!isset($_SESSION['userid'])){
+            if(!isset($_SESSION['empid'])){
                 header("location: http://localhost/labora/user/logout");
             }
             // }else{
@@ -21,7 +21,7 @@
         }
 
         public function product(){
-            if(!isset($_SESSION['userid'])){
+            if(!isset($_SESSION['empid'])){
                 header("location: http://localhost/labora/user/logout");
             }
             // }else{
@@ -37,7 +37,7 @@
         }
 
         public function dashboard(){
-            if(!isset($_SESSION['userid'])){
+            if(!isset($_SESSION['empid'])){
                 header("location: http://localhost/labora/user/logout");
             }
             // }else{
@@ -53,7 +53,7 @@
         }
 
         public function supplier(){
-            if(!isset($_SESSION['userid'])){
+            if(!isset($_SESSION['empid'])){
                 header("location: http://localhost/labora/user/logout");
             }
             // }else{
@@ -69,7 +69,7 @@
         }
 
         public function expiredChemicals(){
-            if(!isset($_SESSION['userid'])){
+            if(!isset($_SESSION['empid'])){
                 header("location: http://localhost/labora/user/logout");
             }
             // }else{
@@ -85,7 +85,7 @@
         }
 
         public function reorder(){
-            if(!isset($_SESSION['userid'])){
+            if(!isset($_SESSION['empid'])){
                 header("location: http://localhost/labora/user/logout");
             }
             // }else{
@@ -101,7 +101,7 @@
         }
 
         public function invoices(){
-            if(!isset($_SESSION['userid'])){
+            if(!isset($_SESSION['empid'])){
                 header("location: http://localhost/labora/user/logout");
             }
             // }else{
@@ -117,7 +117,7 @@
         }
 
         public function quotations(){
-            if(!isset($_SESSION['userid'])){
+            if(!isset($_SESSION['empid'])){
                 header("location: http://localhost/labora/user/logout");
             }
             // }else{
@@ -133,7 +133,7 @@
         }
 
         public function addInventory(){
-            if(!isset($_SESSION['userid'])){
+            if(!isset($_SESSION['empid'])){
                 header("location: http://localhost/labora/user/logout");
             }
             // }else{
@@ -148,7 +148,7 @@
             $this->view("invmng/addInventory" , $data);
         }
         public function viewInventory(){
-            if(!isset($_SESSION['userid'])){
+            if(!isset($_SESSION['empid'])){
                 header("location: http://localhost/labora/user/logout");
             }
             // }else{
@@ -164,7 +164,7 @@
         }
 
         public function invnavbar(){
-            if(!isset($_SESSION['userid'])){
+            if(!isset($_SESSION['empid'])){
                 header("location: http://localhost/labora/user/logout");
             }
             // }else{

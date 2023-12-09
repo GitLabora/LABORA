@@ -1,0 +1,117 @@
+.container_1
+{
+    position: absolute;
+    width: calc(100% - 325px);
+    left: 300px;
+    background: rgba(201, 194, 194, 0.1);
+    transition: 0.5s;
+    color: rgb(0, 0, 0);
+    top: 116px;
+    padding: 0px;
+    margin: 0px 0 10px 10px;
+    border-radius: 20px;
+}
+
+
+
+
+
+
+/* override nev bar for keep white check */
+
+.navigation ul li:nth-child(4)
+{
+    background-color: white;
+}
+
+.navigation ul li:nth-child(4) a .title
+{
+    color: var(--darkblue);
+}
+
+.navigation ul li:nth-child(4) a::before
+{
+    content:'';
+    position: absolute;
+    right:0;
+    top:-50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 30px 30px 0 10px white;
+}
+
+.navigation ul li:nth-child(4) a::after
+{
+    content:'';
+    position: absolute;
+    right:0;
+    bottom:-50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 30px -30px 0 10px white;
+}
+
+.navigation ul li:nth-child(4) a .icon
+{
+    color: var(--darkblue);
+}
+
+.services{
+    margin: 50px;
+}
+
+.services h1,p,h3{
+    width:80%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.services h4{
+    width: 80%;
+    font-family: regfont;
+    padding-left: 210px;
+    margin-bottom: -10px;
+}
+.services ul{
+    list-style-type:decimal;
+    padding-left: 200px;
+}
+.services ul a{
+    width: 80%;
+    text-decoration: none;
+    font-family: regfont;
+    font-size: 14px;
+    color:#1A1B7F
+}
+.services ul a:hover{
+    color: #D8D631;
+}
+.services li{
+    padding: 10px;
+    width: 100%;
+}
+.test-list {
+    position: relative;
+    display: flex;
+}
+.test-list li{
+    width: 100%;
+}
+.vertical-line {
+    position:relative;
+    left:10px;
+    border-left: 1px solid rgb(187, 187, 187);
+    height: 400px; 
+}
+.test-list p{
+    position: absolute;
+    left: 500px;
+    margin: 0 auto;
+    width: 40%;
+    text-align: left;
+}
+.test-list span{
+    color: red;
+}

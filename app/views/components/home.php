@@ -7,6 +7,7 @@
     <title></title>
 </head>
 <body>
-<a href="http://localhost/labora/"><div class="home"><img src="<?php echo APPROOT.'/public/img/home.svg';?>" alt="img not found"><h2>Home</h2></div></a>
+
+<a href="http://localhost/labora/"><i class="fa-solid fa-house"></i></a>
 </body>
 </html>

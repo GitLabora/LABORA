@@ -10,30 +10,20 @@
     font-family: roboto;
     src: url(/lABORA/public/fonts/Roboto-Regular.ttf);
 }
-.home{
+i{
     position: fixed;
     top:20px;
     left:40px;
-    color:rgb(250, 250, 250);
+    color:gold;
     font-weight: 50;
+    background-color: transparent;
+    padding: 5px 24px;
+    border-radius: 20px;
 }
-.home:hover{
+i:hover{
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
-    transform: translate(1px, 1px);
-    transition-duration: 250ms;
-    
+    border: none;
+    background-color: gold;
+    color: #0d0628;
 }
 
-.home h2{
-    font-family: mainfont;
-    display: inline-block;
-    position: relative;
-    margin:10px;
-    font-weight: 50;
-}
-.home img{
-    display: inline-block;
-    color: rgb(255, 255, 255);
-    width: 20px;
-    height: 20px;
-}

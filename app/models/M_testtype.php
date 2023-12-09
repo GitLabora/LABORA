@@ -28,10 +28,15 @@
                 $result =mysqli_query($this->conn , "SELECT * FROM test_type WHERE Test_type='$test_type'") ;
                 if(mysqli_num_rows($result)>0){
                     $row = mysqli_fetch_assoc($result);
-                    return $row["Time_duration"];;
+                    return $row["Time_duration"];
                     
-                }
-                
+                }  
+            }
+
+            public function getRow(){
+                $result =mysqli_query($this->conn , "SELECT * FROM test_type");
+                $result_set = mysqli_fetch_all( $result  , MYSQLI_ASSOC);
+                return $result_set;       
             }
     }
 ?>

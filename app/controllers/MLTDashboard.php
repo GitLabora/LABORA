@@ -17,7 +17,7 @@
             // }
 
             $data = [];
-            $this->view("MLTdashboard/MLT" , $data);
+            $this->view("mltdashboard/MLT" , $data);
         }
 
         public function reports(){
@@ -33,7 +33,7 @@
             // }
 
             $data = [];
-            $this->view("MLTdashboard/reports" , $data);
+            $this->view("mltdashboard/reports" , $data);
         }
 
         public function appointment(){
@@ -49,7 +49,7 @@
             // }
 
             $data = [];
-            $this->view("MLTdashboard/appointment" , $data);
+            $this->view("mltdashboard/appointment" , $data);
         }
 
         public function dashboard(){
@@ -65,7 +65,7 @@
             // }
 
             $data = [];
-            $this->view("MLTdashboard/dashboard" , $data);
+            $this->view("mltdashboard/dashboard" , $data);
         }
 
         public function profile(){
@@ -81,7 +81,7 @@
             // }
 
             $data = [];
-            $this->view("MLTdashboard/profile" , $data);
+            $this->view("mltdashboard/profile" , $data);
         }
 
         public function medicalTests(){
@@ -97,7 +97,7 @@
             // }
 
             $data = [];
-            $this->view("MLTdashboard/medicalTests" , $data);
+            $this->view("mltdashboard/medicalTests" , $data);
         }
         public function test_form(){
             // if(!isset($_SESSION['userid'])){
@@ -112,7 +112,7 @@
             // }
 
             $data = [];
-            $this->view("MLTdashboard/test_form" , $data);
+            $this->view("mltdashboard/test_form" , $data);
         }
     }
 ?>

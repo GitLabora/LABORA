@@ -1,5 +1,5 @@
 <?php
-    class PatientDashboard extends Controller{
+    class AdminDashboard extends Controller{
         public function __construct(){
 
         }
@@ -17,7 +17,7 @@
             // }
 
             $data = [];
-            $this->view("patientdashboard/Patient" , $data);
+            $this->view("admindashboard/Admin" , $data);
         }
 
         public function medicaltest(){
@@ -33,7 +33,7 @@
             // }
 
             $data = [];
-            $this->view("patientdashboard/medicaltest" , $data);
+            $this->view("admindashboard/medicaltest" , $data);
         }
 
         public function userAccount(){
@@ -49,7 +49,7 @@
             // }
 
             $data = [];
-            $this->view("patientdashboard/userAccount" , $data);
+            $this->view("admindashboard/userAccount" , $data);
         }
 
         public function dashboard(){
@@ -65,7 +65,7 @@
             // }
 
             $data = [];
-            $this->view("patientdashboard/dashboard" , $data);
+            $this->view("admindashboard/dashboard" , $data);
         }
 
         public function reports(){
@@ -81,7 +81,7 @@
             // }
 
             $data = [];
-            $this->view("patientdashboard/reports" , $data);
+            $this->view("admindashboard/reports" , $data);
         }
 
         public function payment(){
@@ -97,7 +97,7 @@
             // }
 
             $data = [];
-            $this->view("patientdashboard/payment" , $data);
+            $this->view("admindashboard/payment" , $data);
         }
     }
 ?>

@@ -1,7 +1,0 @@
-check this things
-login session - auto log out after 10min
-access control via link - ok
-clear otp tabel - auto clear
-set timer for otp
-check emp login
-OTP code chance 3

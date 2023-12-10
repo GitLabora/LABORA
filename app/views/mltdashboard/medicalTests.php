@@ -37,7 +37,7 @@
         </div>
         <div class="add">
             
-            <a href="http://localhost/labora/PatientDashboard/test_form" class="addbtn"><ion-icon name="add"></ion-icon> Create New</a>
+            <a href="http://localhost/labora/MLTDashboard/test_form" class="addbtn"><ion-icon name="add"></ion-icon> Create New</a>
          </div>
         <div>
         <table>

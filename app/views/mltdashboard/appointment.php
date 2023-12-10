@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <meta http-equiv="refresh" content="600; url=http://localhost/labora/user/logout"> -->
     <link rel="stylesheet" href="<?php echo APPROOT.'/public/css/mltdashboard/appointment.css'?>">
-    <script src="<?php echo APPROOT.'/public/js/mltdashboard/patient.js';?>"></script>
+    <script src="<?php echo APPROOT.'/public/js/mltdashboard/mlt.js';?>"></script>
     <!-- static icons -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

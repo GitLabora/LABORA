@@ -45,7 +45,7 @@
         </div>
         <div class="add">
             
-            <a href="#" class="addbtn"><ion-icon name="add"></ion-icon> Add User</a>
+            <a href="http://localhost/labora/admindashboard/user_form" class="addbtn"><ion-icon name="add"></ion-icon> Add User</a>
          </div>
         <div>
         <table>

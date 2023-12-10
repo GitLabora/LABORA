@@ -6,10 +6,10 @@
     <meta http-equiv="refresh" content="600; url=http://localhost/labora/user/logout">
     <link rel="stylesheet" href="<?php echo APPROOT.'/public/css/patient.css'?>">
 
-    <title>Patient dashboard</title>
+    <title>Admin dashboard</title>
 </head>
 <body>
-    <h1>Welcome to Employee dashboard <?php echo $_SESSION['empname'];?></h1>
+    <h1>Welcome to Admin dashboard <?php echo $_SESSION['empname'];?></h1>
     <a href="http://localhost/labora/user/logout">Logout</a>
 </body>
 </html>

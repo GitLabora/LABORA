@@ -21,31 +21,31 @@
             </div>
             <ul>
                 <li>
-                    <a href="http://localhost/labora/PatientDashboard/dashboard">
+                    <a href="http://localhost/labora/MLTDashboard/dashboard">
                     <span class="icon"><ion-icon name="grid"></ion-icon></span>
                     <span class="title">Dashboard</span>
                     </a>
                 </li>
                 <li>
-                    <a href="http://localhost/labora/PatientDashboard/appointment">
+                    <a href="http://localhost/labora/MLTDashboard/appointment">
                     <span class="icon"><ion-icon name="calendar-number"></ion-icon></ion-icon></span>
                     <span class="title">Appointment</span>
                     </a>
                 </li>
                 <li>
-                    <a href="http://localhost/labora/PatientDashboard/reports">
+                    <a href="http://localhost/labora/MLTDashboard/reports">
                     <span class="icon"><ion-icon name="reader"></ion-icon></span>
                     <span class="title">Medical reports</span>
                     </a>
                 </li>
                 <li>
-                    <a href="http://localhost/labora/PatientDashboard/medicalTests">
+                    <a href="http://localhost/labora/MLTDashboard/medicalTests">
                     <span class="icon"><ion-icon name="thermometer"></ion-icon></span>
                     <span class="title">Medical Tests</span>
                     </a>
                 </li>
                 <!-- <li>
-                    <a href="http://localhost/labora/PatientDashboard/profile">
+                    <a href="http://localhost/labora/MLTDashboard/profile">
                     <span class="icon"><ion-icon name="person"></ion-icon></span>
                     <span class="title">Profile</span>
                     </a>

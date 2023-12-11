@@ -1,7 +1,8 @@
 <?php
     class AdminDashboard extends Controller{
+        private $md_employee;
         public function __construct(){
-
+            $this->md_employee = $this->model('M_employee');
         }
 
         public function index(){
@@ -48,7 +49,26 @@
             //     }
             // }
 
-            $data = [];
+            $data = array();
+            $result = $this->md_employee->getRow();
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {;
+                        $data[] = $row;
+                }
+            }else{
+                $data = [[
+                    'id'=> "",
+                    'full_name' => '',
+                    'email' => '',
+                    'phone' => '',
+                    'dob'=> '',
+                    'address'=> '',
+                    'gender'=> '',
+                    'role'=> '',
+                ],];
+            }
+
+            // $data = [];
             $this->view("admindashboard/userAccount" , $data);
         }
 

@@ -36,7 +36,7 @@
         </div>
         <div class="add">
             
-            <a href="http://localhost/labora/PatientDashboard/appointment_form" class="addbtn"><ion-icon name="add"></ion-icon> Schedule appointment</a>
+            <a href="http://localhost/labora/ReceptDashboard/appointment_form" class="addbtn"><ion-icon name="add"></ion-icon> Schedule appointment</a>
          </div>
 
         <div>

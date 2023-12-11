@@ -36,7 +36,7 @@
         </div> -->
         <div class="add">
             
-            <a href="http://localhost/labora/PatientDashboard/payment2_form" class="addbtn"><ion-icon name="add"></ion-icon> Add Payment</a>
+            <a href="http://localhost/labora/ReceptDashboard/payment2_form" class="addbtn"><ion-icon name="add"></ion-icon> Add Payment</a>
          </div>
 
         <div>

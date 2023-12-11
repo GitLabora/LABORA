@@ -36,7 +36,7 @@
         </div> -->
         <div class="add">
             
-            <a href="http://localhost/labora/PatientDashboard/patient_form" class="addbtn"><ion-icon name="add"></ion-icon> Add Patient</a>
+            <a href="http://localhost/labora/ReceptDashboard/patient_form" class="addbtn"><ion-icon name="add"></ion-icon> Add Patient</a>
          </div>
         <div>
         <table>

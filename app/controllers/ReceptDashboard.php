@@ -17,7 +17,7 @@
             // }
 
             $data = [];
-            $this->view("receptdashboard/Patient" , $data);
+            $this->view("receptdashboard/Recept" , $data);
         }
 
         public function appointment(){

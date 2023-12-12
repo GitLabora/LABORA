@@ -2,7 +2,7 @@
     class AdminDashboard extends Controller{
         private $md_employee;
         public function __construct(){
-            $this->md_employee = $this->model('M_employee');
+            // $this->md_employee = $this->model('M_employee');
         }
 
         public function index(){
@@ -18,7 +18,7 @@
             // }
 
             $data = [];
-            $this->view("admindashboard/Admin" , $data);
+            $this->view("admindashboard/dashboard" , $data);
         }
 
         public function medicaltest(){
@@ -176,7 +176,7 @@
                     sendEmail($email , $fullname , $body , $subject);
                     $hashed_password = password_hash($password,PASSWORD_DEFAULT);
                     $this->md_employee->enterUserData($fullname,$email,$phone,$dob,$address ,$gender ,$role, $hashed_password);
-                    header('location: http://localhost/labora/admin/userAccount');
+                    header('location: http://localhost/labora/admindashboard/userAccount');
                 }
 
             }else{

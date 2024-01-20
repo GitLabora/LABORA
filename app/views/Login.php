@@ -7,7 +7,7 @@
     <title>Login Form</title>
     <script src="<?php echo APPROOT.'\public\js\login.js';?>"></script>
 </head>
-<body onload="select()">
+<body onload="patient()">
     <?php require_once 'components/home.php'?>
     <div class="login-container">
         <h1>SIGN IN TO YOUR ACCOUNT</h1>

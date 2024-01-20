@@ -1,16 +1,21 @@
 .container_1
 {
-    position: absolute;
-    width: calc(100% - 325px);
+    position: fixed;
+    width: calc(100% - 300px);
     left: 300px;
-    background: rgba(158, 158, 158, 0.1);
+    background: white;
     transition: 0.5s;
     color: rgb(0, 0, 0);
-    top: 116px;
-    padding: 28px;
-    margin: 10px 0 10px 10px;
-    border-radius: 20px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+    top: 72px;
+    padding: 10px;
+    margin: 0px;
+    height: 93%;
+    overflow: auto;
+    font-family: roboto;
+}
+
+body{
+    overflow: hidden;
 }
 
 .tablename {
@@ -126,7 +131,7 @@ button.del:hover{
 .add {
     display: flex;
     align-items: center;
-    background-color: #3498db;
+    background-color: #1e0e58;
     color: #fff;
     padding: 5px;
     border-radius: 5px;
@@ -134,37 +139,34 @@ button.del:hover{
     justify-content: flex-end;
   }
   
-  /* Style the icon */
-  .add ion-icon {
-    font-size: 24px;
-    margin-right: 10px;
-  }
-  
-  /* Style the "Schedule appointment" link */
-  .addbtn {
+  .add {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.add a {
     text-decoration: none;
-    color: #fff;
-    background-color: #1e6ab0;
-    font-weight: bold;
-    transition: background-color 0.3s;
-  }
-  
-  .addbtn:hover {
-    background-color: var(--mainblue);
-  }
-  
-  /* Center the "Schedule appointment" link vertically within the container */
-  .addbtn {
-    display: flex;
-    align-items: center;
+    color: white;
+}
+
+.addbtn {
+    display: inline-block;
+    padding: 10px 20px;
     font-size: 16px;
-  }
-  
-  /* Add padding to the link and round the corners */
-  .addbtn {
-    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #371ba7;
+    color: #fff;
     border-radius: 5px;
-  }
+    border: 2px solid #371ba7;
+    cursor: pointer;
+}
+
+.addbtn:hover {
+    background-color: #321795;
+    border-color: #321795;
+}
+
   
 
 
@@ -208,4 +210,15 @@ button.del:hover{
 .navigation ul li:nth-child(2) a .icon
 {
     color: var(--darkblue);
+}
+
+
+.container_1 h5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-family: roboto;
+    color: rgb(68, 68, 68);
+    margin-right: 67%;
 }

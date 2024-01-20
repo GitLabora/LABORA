@@ -1,22 +1,21 @@
 .container_1
 {
-    position: absolute;
-    width: calc(100% - 325px);
+    position: fixed;
+    width: calc(100% - 300px);
     left: 300px;
-    background: rgba(201, 194, 194, 0.1);
+    background: white;
     transition: 0.5s;
     color: rgb(0, 0, 0);
-    top: 116px;
-    padding: 0px;
-    margin: 0px 0 10px 10px;
-    border-radius: 20px;
+    top: 72px;
+    padding: 28px;
+    margin: 0px;
+    overflow: auto;
+    height: 95%;
 }
 
-
-
-
-
-
+body{
+    overflow: hidden;
+}
 /* override nev bar for keep white check */
 
 .navigation ul li:nth-child(4)

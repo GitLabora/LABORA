@@ -44,7 +44,7 @@
                 </div>
                 <div class="input">
                     <label for="address">Address:</label><br>
-                    <textarea id="address" name="address" placeholder="<?php echo $data['address']?>" required></textarea>
+                    <textarea id="address" name="address" placeholder="<?php echo $data['address']?>" cols="5" required></textarea>
                 </div>
                 <div class="input">
                     <a href="http://localhost/labora/PatientDashboard/dashboard">Cancel</a>

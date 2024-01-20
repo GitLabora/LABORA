@@ -16,32 +16,40 @@
 <body>
     <?php require_once 'components/nevbar.php' ?>
     <div class="container_1">
-
-        <div class="tablename">
-            <h3>Appointment</h3>
-        </div>
-        <div class="line"></div>
-        <div class="searchbar">
-            <input type="text" class="search" placeholder="Enter reference number">
-            <a href="#" class="searchbtn">Search</a>
-        </div>
-
-        <div class="filter">
-            <form action="#" method="post">
-                <input type="text" class="test-type" placeholder="Enter test type">
-                <input type="date" class="from">
-                <input type="date" class="to">
-                <button type="submit" class="submit button">Filter</button>
-            </form>
-        </div>
+        <div class="table-container">
+        <h2><i class="fa-solid fa-calendar-check"></i>Appointment</h2>
         <div class="add">
-            
             <a href="http://localhost/labora/PatientDashboard/appointment_form" class="addbtn"><ion-icon name="add"></ion-icon> Schedule appointment</a>
          </div>
-        <div>
-        <table>
+        <div class="search-container">
+        <input type="text" class="search-box" id="searchInput" placeholder="Search...">
+        <button class="search-button">Search</button>
+        </div>
+
+        <div class="filter-box">
+            <div class="filter-section">
+                <!-- Add your filter options here -->
+                <select class="filter-box">
+                <option value="all">All</option>
+                <option value="category1">Category 1</option>
+                <option value="category2">Category 2</option>
+                <!-- Add more filter options as needed -->
+                </select>
+                <button class="filter-button">Filter By ID</button>
+            </div>
+            <div class="filter-section">
+                <!-- Add your filter options here -->
+                <select class="filter-box">
+                <option value="all">All</option>
+                <option value="category1">Category 1</option>
+                <option value="category2">Category 2</option>
+                <!-- Add more filter options as needed -->
+                </select>
+                <button class="filter-button">Filter By Email</button>
+            </div>
+        </div>
+        <table id="myTable">
         <thead>
-            <tr>
                 <th>Index</th>
                 <th>Ref No</th>
                 <th>Test Type</th>
@@ -50,31 +58,119 @@
                 <th>Appointment Duration</th>
                 <th>Appointment Status</th>
                 <th>Appointment Notes</th>
-                <th></th>
-            </tr>
-        </thead>
+                <th>Action</th>
+        </thead >
         <tbody>
-            <?php
-            $reversedArray = array_reverse($data, true);
-            foreach ($reversedArray as $row) {
-                echo '<tr>
-                <td>'.$row['Id'].'</td>
-                <td>'.$row['Ref_No'].'</td>
-                <td>'.$row['Test_Type'].'</td>
-                <td>'.$row['Appointment_Date'].'</td>
-                <td>'.$row['Appointment_Time'].'</td>
-                <td>'.$row['Appointment_Duration'].'</td>
-                <td>'.$row['Appointment_Status'].'</td>
-                <td>'.$row['Appointment_Notes'].'</td>
-                <td><a href="http://localhost/labora/PatientDashboard/cancelAppointment/'.$row['Id'].'" class="cancel">Cancel</a></td>
-            </tr>';
-            }
-            ?>
-            
-            <!-- Add more rows as needed -->
-        </tbody>
+                <div class='table_body'>
+                        <?php
+                        $reversedArray = array_reverse($data, true);
+                        foreach ($reversedArray as $row) {
+                            echo '<tr>
+                            <td>'.$row['Id'].'</td>
+                            <td>'.$row['Ref_No'].'</td>
+                            <td>'.$row['Test_Type'].'</td>
+                            <td>'.$row['Appointment_Date'].'</td>
+                            <td>'.$row['Appointment_Time'].'</td>
+                            <td>'.$row['Appointment_Duration'].'</td>
+                            <td>'.$row['Appointment_Status'].'</td>
+                            <td>'.$row['Appointment_Notes'].'</td>
+                            <td><a href="http://localhost/labora/PatientDashboard/cancelAppointment/'.$row['Id'].'" class="cancel">Cancel</a></td>
+                        </tr>';
+                        }
+                        ?>
+                        
+                        <!-- Add more rows as needed -->
+                </div>
+            </tbody>
         </table>
+            <div class="pagination">
+            <h5 id="table_data"></h5>
+            <button onclick="previousPage()" >Previous</button>
+            <button onclick="nextPage()" id="next">Next</button>
+            </div>
         </div>
     </div>
+
+    <script>
+        let currentPage = 1;
+
+        function showPage(page) {
+          const rows = document.querySelectorAll('tbody tr');
+          const rowsPerPage = 5; // Adjust as needed
+
+          const start = (page - 1) * rowsPerPage;
+          const end = start + rowsPerPage;
+          if(end>=rows.length){
+            end_str = rows.length
+          }else{
+            end_str = end
+          }
+          let str = `Showing ${start+1} to ${end_str} of ${rows.length} entries`
+          document.getElementById("table_data").innerHTML = str
+
+          rows.forEach((row, index) => {
+            if (index >= start && index < end) {
+              row.style.display = 'table-row';
+            } else {
+              row.style.display = 'none';
+            }
+          });
+        }
+
+        function nextPage() {
+          const totalRows = document.querySelectorAll('tbody tr').length;
+          const rowsPerPage = 5; // Adjust as needed
+          const totalPages = Math.ceil(totalRows / rowsPerPage);
+
+          if (currentPage < totalPages) {
+            currentPage++;
+            showPage(currentPage);
+          }
+        }
+
+        function previousPage() {
+          if (currentPage > 1) {
+            currentPage--;
+            showPage(currentPage);
+          }
+        }
+
+    
+        showPage(currentPage);
+
+
+        function searchTable() {
+        
+          var input = document.getElementById('searchInput');
+          var filter = input.value.toUpperCase();
+
+      
+          var table = document.getElementById('myTable');
+          var rows = table.querySelectorAll('tbody tr');
+
+          console.log(rows)
+          for (var i = 0; i < rows.length; i++) {
+            var cells = rows[i].getElementsByTagName('td');
+            var found = false;
+
+            for (var j = 0; j < cells.length; j++) {
+              var cellText = cells[j].innerText || cells[j].textContent;
+              if (cellText.toUpperCase().indexOf(filter) > -1) {
+                found = true;
+                break;
+              }
+            }
+
+            if (found) {
+              rows[i].style.display = '';
+            } else {
+              rows[i].style.display = 'none';
+            }
+          }
+        }
+
+        // Attach the search function to the input's 'input' event
+        document.getElementById('searchInput').addEventListener('input', searchTable);
+  </script>
 </body>
 </html>

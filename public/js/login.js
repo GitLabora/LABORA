@@ -1,6 +1,3 @@
-if(sessionStorage.getItem('flag')==undefined){
-    sessionStorage.setItem('flag' , '0');
-}
 function employee(){  
     document.getElementById("employee").style.display = "block";
     document.getElementById("patient").style.display = "none";
@@ -9,8 +6,6 @@ function employee(){
 
     document.getElementById("patient-button").style.background = "none";
     document.getElementById("patient-button").style.color = "white";
-
-    sessionStorage.setItem('flag' , '1');
 }
 function patient(){ 
     document.getElementById("employee").style.display = "none";
@@ -20,15 +15,4 @@ function patient(){
 
     document.getElementById("employee-button").style.background = "none";
     document.getElementById("employee-button").style.color = "white";
-
-    sessionStorage.setItem('flag' , '0');
-}
-
-function select(){
-    if(sessionStorage.getItem('flag')=='0'){
-        sessionStorage.setItem('flag' , '3');
-        patient();
-    }else{
-        employee();
-    }
 }

@@ -6,7 +6,7 @@
                 $this->conn = $this->conn->dbObject();
             }
             public function enterAppointmentData($refno,$test_type,$appointment_date,$appointment_time,$appointment_duration,$appointment_status,$appointment_notes,$email){
-                // get last row id
+
                 $result =mysqli_query($this->conn , "SELECT * FROM appointment ORDER BY id DESC LIMIT 1") ;
                 $appointment = mysqli_fetch_assoc($result);
                 $lastid = 0;
@@ -18,6 +18,8 @@
                 $nextid = $lastid +1;
                 $query = "INSERT INTO appointment VALUES('$nextid','$refno','$test_type','$appointment_date','$appointment_time','$appointment_duration','$appointment_status','$appointment_notes','$email')";
                 mysqli_query($this->conn , $query);
+
+                return true;
                 // echo
                 // "<script> alert('Registration Successful');</script>";
             }

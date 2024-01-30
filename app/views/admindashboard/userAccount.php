@@ -45,120 +45,40 @@
         </div>
         <div class="add">
             
-            <a href="http://localhost/labora/admindashboard/user_form" class="addbtn"><ion-icon name="add"></ion-icon> Add User</a>
+            <a href="http://localhost/labora/admindashboard/addUser" class="addbtn"><ion-icon name="add"></ion-icon> Add User</a>
          </div>
         <div>
         <table>
             <thead>
                 <tr>
                     <th>Index</th>
-                    <th>User Id</th>
-                    <th>User Name</th>
-                    <th>Role</th>
-                    <th>Mobile</th>
-                    <!-- <th>Appointment Duration</th>
-                    <th>Appointment Status</th>
-                    <th>Appointment Notes</th> -->
-                    <th>Action</th>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Date Of Birth</th>
+                    <th>Address</th>
+                    <th>gender</th>
+                    <th>role</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>MLT123</td>
-                    <td>John Silva</td>
-                    <td>MLT</td>
-                    <td>071-1234567</td>
-                    <!-- Add actions or links for this row -->
-                    <td>
-                        <a href="#" class="download"><ion-icon name="create-outline"></ion-icon></a>
-                        <a href="#" class="delete"><ion-icon name="trash"></ion-icon></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>LA1-456</td>
-                    <td>Lisa Perera</td>
-                    <td>Lab Assistant 1</td>
-                    <td>077-9876543</td>
-                    <!-- Add actions or links for this row -->
-                    <td>
-                        <a href="#" class="download"><ion-icon name="create-outline"></ion-icon></a>
-                        <a href="#" class="delete"><ion-icon name="trash"></ion-icon></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>LA2-789</td>
-                    <td>Mark Fernando</td>
-                    <td>Lab Assistant 2</td>
-                    <td>076-5432109</td>
-                    <!-- Add actions or links for this row -->
-                    <td>
-                        <a href="#" class="download"><ion-icon name="create-outline"></ion-icon></a>
-                        <a href="#" class="delete"><ion-icon name="trash"></ion-icon></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>INV456</td>
-                    <td>Susan Rajapakse</td>
-                    <td>Inventory Manager</td>
-                    <td>072-4567890</td>
-                    <!-- Add actions or links for this row -->
-                    <td>
-                        <a href="#" class="download"><ion-icon name="create-outline"></ion-icon></a>
-                        <a href="#" class="delete"><ion-icon name="trash"></ion-icon></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>REC123</td>
-                    <td>Mike Wijesinghe</td>
-                    <td>Receptionist</td>
-                    <td>071-9876543</td>
-                    <!-- Add actions or links for this row -->
-                    <td>
-                        <a href="#" class="download"><ion-icon name="create-outline"></ion-icon></a>
-                        <a href="#" class="delete"><ion-icon name="trash"></ion-icon></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>SUPP1</td>
-                    <td>Linda Perera</td>
-                    <td>Supplier 1</td>
-                    <td>075-1234567</td>
-                    <!-- Add actions or links for this row -->
-                    <td>
-                        <a href="#" class="download"><ion-icon name="create-outline"></ion-icon></a>
-                        <a href="#" class="delete"><ion-icon name="trash"></ion-icon></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td>SUPP2</td>
-                    <td>David Fernando</td>
-                    <td>Supplier 2</td>
-                    <td>076-9876543</td>
-                    <!-- Add actions or links for this row -->
-                    <td>
-                        <a href="#" class="download"><ion-icon name="create-outline"></ion-icon></a>
-                        <a href="#" class="delete"><ion-icon name="trash"></ion-icon></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td>SUPP3</td>
-                    <td>Susan Silva</td>
-                    <td>Supplier 3</td>
-                    <td>070-5432109</td>
-                    <!-- Add actions or links for this row -->
-                    <td>
-                        <a href="#" class="download"><ion-icon name="create-outline"></ion-icon></a>
-                        <a href="#" class="delete"><ion-icon name="trash"></ion-icon></a>
-                    </td>
-                </tr>
+            <?php
+                $reversedArray = array_reverse($data, true);
+                foreach ($reversedArray as $row) {
+                    echo '<tr>
+                    <td>'.$row['id'].'</td>
+                    <td>'.$row['full_name'].'</td>
+                    <td>'.$row['email'].'</td>
+                    <td>'.$row['phone'].'</td>
+                    <td>'.$row['dob'].'</td>
+                    <td>'.$row['address'].'</td>
+                    <td>'.$row['gender'].'</td>
+                    <td>'.$row['role'].'</td>
+                    <td><a href="#" class="cancel">Edit</a><a href="http://localhost/labora/admindashboard/deleteEmployee/'.$row['email'].'" class="cancel">Delete</a></td>
+                </tr>';
+                }
+                ?>
                 <!-- You can add more rows with similar data as needed -->
             </tbody>
         </table>

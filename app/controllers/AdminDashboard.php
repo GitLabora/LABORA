@@ -119,21 +119,21 @@
             $data = [];
             $this->view("admindashboard/payment" , $data);
         }
-        public function user_form(){
-            // if(!isset($_SESSION['userid'])){
-            //     header("location: http://localhost/labora/user/logout");
-            // }
-            // }else{
-            //     if((time()-$_SESSION['last_login_timestamp'])>600){
-            //         header("location: http://localhost/labora/user/logout");
-            //     }else{
-            //         $_SESSION['last_login_timestamp'] = time();
-            //     }
-            // }
+        // public function user_form(){
+        //     // if(!isset($_SESSION['userid'])){
+        //     //     header("location: http://localhost/labora/user/logout");
+        //     // }
+        //     // }else{
+        //     //     if((time()-$_SESSION['last_login_timestamp'])>600){
+        //     //         header("location: http://localhost/labora/user/logout");
+        //     //     }else{
+        //     //         $_SESSION['last_login_timestamp'] = time();
+        //     //     }
+        //     // }
 
-            $data = [];
-            $this->view("admindashboard/user_form" , $data);
-        }
+        //     $data = [];
+        //     $this->view("admindashboard/user_form" , $data);
+        // }
 
         public function addUser(){
             if($_SERVER['REQUEST_METHOD']=="POST"){

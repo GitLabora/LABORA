@@ -64,19 +64,24 @@
                 <div class='table_body'>
                         <?php
                         $reversedArray = array_reverse($data, true);
-                        foreach ($reversedArray as $row) {
-                            echo '<tr>
-                            <td>'.$row['Id'].'</td>
-                            <td>'.$row['Ref_No'].'</td>
-                            <td>'.$row['Test_Type'].'</td>
-                            <td>'.$row['Appointment_Date'].'</td>
-                            <td>'.$row['Appointment_Time'].'</td>
-                            <td>'.$row['Appointment_Duration'].'</td>
-                            <td>'.$row['Appointment_Status'].'</td>
-                            <td>'.$row['Appointment_Notes'].'</td>
-                            <td><a href="http://localhost/labora/PatientDashboard/cancelAppointment/'.$row['Id'].'" class="cancel">Cancel</a></td>
-                        </tr>';
+                        if(count($reversedArray)>0){
+                            foreach ($reversedArray as $row) {
+                              echo '<tr>
+                              <td>'.$row['Id'].'</td>
+                              <td>'.$row['Ref_No'].'</td>
+                              <td>'.$row['Test_Type'].'</td>
+                              <td>'.$row['Appointment_Date'].'</td>
+                              <td>'.$row['Appointment_Time'].'</td>
+                              <td>'.$row['Appointment_Duration'].'</td>
+                              <td>'.$row['Appointment_Status'].'</td>
+                              <td>'.$row['Appointment_Notes'].'</td>
+                              <td><a href="http://localhost/labora/PatientDashboard/cancelAppointment/'.$row['Id'].'" class="cancel">Cancel</a></td>
+                          </tr>';
+                          }
+                        }else{
+                          echo '';
                         }
+                        
                         ?>
                         
                         <!-- Add more rows as needed -->
@@ -143,12 +148,15 @@
         
           var input = document.getElementById('searchInput');
           var filter = input.value.toUpperCase();
-
+          console.log(filter)
+          if(filter==''){
+            showPage(currentPage);
+            return
+          }
       
           var table = document.getElementById('myTable');
           var rows = table.querySelectorAll('tbody tr');
 
-          console.log(rows)
           for (var i = 0; i < rows.length; i++) {
             var cells = rows[i].getElementsByTagName('td');
             var found = false;

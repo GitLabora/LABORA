@@ -17,99 +17,166 @@
     <?php require_once 'components/nevbar.php' ?>
 
     <div class="container_1">
-        <div class="boxset-1">
-            <div class="box box-1">
-                <span>65</span><br>
-                <h5>Number of Reports Received</h5><br>
-                <p>patient are kept up to date with real-time updates to their medical history.</p>
-            </div>
-            <div class="box box-2">
-                <span>6</span><br>
-                <h5>Number of Medical Test Types</h5><br>
-                <p>This box provides a snapshot of the variety of medical test types the patient has undergone. </p>
-            </div>
-            <div class="box box-3">
-                <span>600$</span><br>
-                <h5>Medical Test Expenses</h5><br>
-                <p>The total expenses will automatically update as new costs are incurred. </p>
-            </div>
-            <div class="box box-4">
-                <span>MRI</span><br>
-                <h5>Most Frequent Test</h5><br>
-                <p>This box identifies the primary medical test type that the patient has taken most often.</p>
-            </div>
-        </div>
-    </div>
+        <div class="boxset_1">
 
-    <div class="container_2">
-        <div class="boxset-2">
-            <div class="message box-1">
-
-                <h1>Calendar</h1>
-
-                <div class="month">      
-                <ul>
-                    <li class="prev">&#10094;</li>
-                    <li class="next">&#10095;</li>
-                    <li>
-                    August<br>
-                    <span style="font-size:18px">2021</span>
-                    </li>
-                </ul>
+            <div class="box box_1">
+                <div class="text">
+                    <h5>Number of Reports Received</h5>
+                    <h1>14</h1>
+                    <p><i class="fa-solid fa-arrow-right" style="color: #ff0000;"></i> patient are kept up to date with real-time updates to their medical history.</p>
                 </div>
-
-                <ul class="weekdays">
-                <li>Mo</li>
-                <li>Tu</li>
-                <li>We</li>
-                <li>Th</li>
-                <li>Fr</li>
-                <li>Sa</li>
-                <li>Su</li>
-                </ul>
-
-                <ul class="days">  
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-                <li>6</li>
-                <li>7</li>
-                <li>8</li>
-                <li>9</li>
-                <li><span class="active">10</span></li>
-                <li>11</li>
-                <li>12</li>
-                <li>13</li>
-                <li>14</li>
-                <li>15</li>
-                <li>16</li>
-                <li>17</li>
-                <li>18</li>
-                <li>19</li>
-                <li>20</li>
-                <li>21</li>
-                <li>22</li>
-                <li>23</li>
-                <li>24</li>
-                <li>25</li>
-                <li>26</li>
-                <li>27</li>
-                <li>28</li>
-                <li>29</li>
-                <li>30</li>
-                <li>31</li>
-                </ul>
+                <div class="icon">
+                    <i class="fa-solid fa-file-contract"></i>
+                </div>
             </div>
-            <div class="notify box-2">
-            <div class="notification-box">
-                <h2>Notification</h2>
-                <p>You have a new notification in your Notification Box. Click below to read it.</p>
-                <p class="timestamp">Received 3 hours ago</p>
+
+            <div class="box box_2">
+                <div class="text">
+                    <h5>Number of Medical Test Types</h5>
+                    <h1>3</h1>
+                    <p><i class="fa-solid fa-arrow-right" style="color: #ff0000;"></i> This box provides a snapshot of the variety of medical test types the patient has undergone.</p>
+                </div>
+                <div class="icon">
+                    <i class="fa-solid fa-hand-holding-medical"></i>
+                </div>
             </div>
+
+            <div class="box box_2">
+                <div class="text">
+                    <h5>Total Refund</h5>
+                    <h1>Rs. 6500</h1>
+                    <p><i class="fa-solid fa-arrow-right" style="color: #ff0000;"></i> giving back all the money to a patient if they cancel their appointment in a lab system</p>
+                </div>
+                <div class="icon">
+                    <i class="fa-solid fa-money-bill-trend-up"></i>
+                </div>
+            </div>
+
+            <div class="box box_2">
+                <div class="text">
+                    <h5>Medical Test Expenses</h5>
+                    <h1>Rs. 65</h1>
+                    <p><i class="fa-solid fa-arrow-right" style="color: #ff0000;"></i> The total expenses will automatically update as new costs are incurred.</p>
+                </div>
+                <div class="icon">
+                    <i class="fa-solid fa-money-check-dollar"></i>
+                </div>
+            </div>
+
+        </div>
+        <div class="boxset_2">
+            <div class="bigbox bigbox_1">
+                <div class="title">
+                    <h3>All Medical Tests</h3>
+                    <p class="sub_title"><i class="fa-solid fa-file-invoice-dollar"></i> Cost of medical Test</p>
+                </div>
+                <div class="boxes">
+                    <div class="test_box">
+                        <div class="tbox tbox_1">
+                            <h4><i class="fa-solid fa-heart-pulse" style="color: #8000ff;"></i>  Blood Test</h4>
+                        </div>
+                        <div class="tbox tbox_1">
+                            <p>$1500</p>
+                            <span>Cost</span>
+                        </div>
+                        <div class="tbox tbox_1">
+                            <p>15 min</p>
+                            <span>Time duration</span>
+                        </div>
+                    </div>
+                    <div class="test_box">
+                        <div class="tbox tbox_1">
+                            <h4><i class="fa-solid fa-heart-pulse" style="color: #8000ff;"></i>  Blood Test</h4>
+                        </div>
+                        <div class="tbox tbox_1">
+                            <p>$150</p>
+                            <span>Cost</span>
+                        </div>
+                        <div class="tbox tbox_1">
+                            <p>12 min</p>
+                            <span>Time duration</span>
+                        </div>
+                    </div>
+                    <div class="test_box">
+                        <div class="tbox tbox_1">
+                            <h4><i class="fa-solid fa-heart-pulse" style="color: #8000ff;"></i>  Blood Test</h4>
+                        </div>
+                        <div class="tbox tbox_1">
+                            <p>$100</p>
+                            <span>Cost</span>
+                        </div>
+                        <div class="tbox tbox_1">
+                            <p>20 min</p>
+                            <span>Time duration</span>
+                        </div>
+                    </div>
+                    <div class="test_box">
+                        <div class="tbox tbox_1">
+                            <h4><i class="fa-solid fa-heart-pulse" style="color: #8000ff;"></i>  Blood Test</h4>
+                        </div>
+                        <div class="tbox tbox_1">
+                            <p>$1500</p>
+                            <span>Cost</span>
+                        </div>
+                        <div class="tbox tbox_1">
+                            <p>15 min</p>
+                            <span>Time duration</span>
+                        </div>
+                    </div>
+                    <div class="test_box">
+                        <div class="tbox tbox_1">
+                            <h4><i class="fa-solid fa-heart-pulse" style="color: #8000ff;"></i>  Blood Test</h4>
+                        </div>
+                        <div class="tbox tbox_1">
+                            <p>$1500</p>
+                            <span>Cost</span>
+                        </div>
+                        <div class="tbox tbox_1">
+                            <p>15 min</p>
+                            <span>Time duration</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bigbox bigbox_2">
+                    <div class="calendar">
+                        <div class="header">
+                            <div class="month"></div>
+                            <div class="btns">
+                                <div class="btn today-btn">
+                                    <i class="fas fa-calendar-day"></i>
+                                </div>
+                                <div class="btn prev-btn">
+                                    <i class="fas fa-chevron-left"></i>
+                                </div>
+                                <div class="btn next-btn">
+                                    <i class="fas fa-chevron-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="weekdays">
+                            <div class="day">Sun</div>
+                            <div class="day">Mon</div>
+                            <div class="day">Tue</div>
+                            <div class="day">Wed</div>
+                            <div class="day">Thu</div>
+                            <div class="day">Fri</div>
+                            <div class="day">Sat</div>
+                        </div>
+                        <div class="days">
+                            <!-- lets add days using js -->
+                        </div>
+                    </div>
             </div>
         </div>
     </div>
+
+    <script src="<?php echo APPROOT.'/public/js/patientdashboard/dashboard.js';?>"></script>
+
+    <script>
+        function getTime(date){
+            
+        }
+    </script>
 </body>
 </html>

@@ -5,25 +5,22 @@
 
         private $md_user;
 
+        private $auth;
+
         private $md_report;
         public function __construct(){
             $this->md_appointment = $this->model('M_appointment');
             $this->md_testtype = $this->model('M_testtype');
             $this->md_user = $this->model('M_user');
             $this->md_report = $this->model('M_report');
+
+            // checo authentication
+            $this->auth = new AuthMiddleware();
+            $this->auth->authMiddleware("patient");
+
         }
 
         public function index(){
-            if(!isset($_SESSION['userid'])){
-                header("location: http://localhost/labora/user/logout");
-            }
-            // }else{
-            //     if((time()-$_SESSION['last_login_timestamp'])>600){
-            //         header("location: http://localhost/labora/user/logout");
-            //     }else{
-            //         $_SESSION['last_login_timestamp'] = time();
-            //     }
-            // }
 
             $data = [];
             $this->view("patientdashboard/Dashboard" , $data);
@@ -31,16 +28,6 @@
 
 
         public function appointment(){
-            if(!isset($_SESSION['userid'])){
-                header("location: http://localhost/labora/user/logout");
-            }
-            // }else{
-            //     if((time()-$_SESSION['last_login_timestamp'])>600){
-            //         header("location: http://localhost/labora/user/logout");
-            //     }else{
-            //         $_SESSION['last_login_timestamp'] = time();
-            //     }
-            // }
             
             $data = array();
             $result = $this->md_appointment->getRowByEmail($_SESSION['useremail']);
@@ -68,16 +55,6 @@
         }
 
         public function searchAppointment(){
-            if(!isset($_SESSION['userid'])){
-                header("location: http://localhost/labora/user/logout");
-            }
-            // }else{
-            //     if((time()-$_SESSION['last_login_timestamp'])>600){
-            //         header("location: http://localhost/labora/user/logout");
-            //     }else{
-            //         $_SESSION['last_login_timestamp'] = time();
-            //     }
-            // }
             
             $data = array();
             $result = $this->md_appointment->getRowByEmail($_SESSION['useremail']);
@@ -105,59 +82,30 @@
         }
 
         public function dashboard(){
-            if(!isset($_SESSION['userid'])){
-                header("location: http://localhost/labora/user/logout");
-            }
-            // }else{
-            //     if((time()-$_SESSION['last_login_timestamp'])>600){
-            //         header("location: http://localhost/labora/user/logout");
-            //     }else{
-            //         $_SESSION['last_login_timestamp'] = time();
-            //     }
-            // }
 
             $data = [];
             $this->view("patientdashboard/dashboard" , $data);
         }
 
         public function medicaltest(){
-            if(!isset($_SESSION['userid'])){
-                header("location: http://localhost/labora/user/logout");
-            }
-            // }else{
-            //     if((time()-$_SESSION['last_login_timestamp'])>600){
-            //         header("location: http://localhost/labora/user/logout");
-            //     }else{
-            //         $_SESSION['last_login_timestamp'] = time();
-            //     }
-            // }
 
             $data = [];
             $this->view("patientdashboard/medicaltest" , $data);
         }
 
         public function appointment_form(){
-            if(!isset($_SESSION['userid'])){
-                header("location: http://localhost/labora/user/logout");
-            }
-            // }else{
-            //     if((time()-$_SESSION['last_login_timestamp'])>600){
-            //         header("location: http://localhost/labora/user/logout");
-            //     }else{
-            //         $_SESSION['last_login_timestamp'] = time();
-            //     }
-            // }
+
             $data = [
                 'dateerr' => ""
             ];
 
             if($_SERVER['REQUEST_METHOD']=="POST"){
                 // $currentDate = date('Y-m-d');
+                $jsonData = file_get_contents("php://input");
+                $data = json_decode($jsonData, true);
 
-                $_POST = filter_input_array(INPUT_POST , FILTER_SANITIZE_STRING);
-
-                $test_type_id = trim($_POST['test-type']);
-                $appointment_notes = trim($_POST['appointment-notes']);
+                $test_type_id = trim($data['test-type']);
+                $appointment_notes = trim($data['appointment-notes']);
 
                 if(empty($data["dateerr"])){
                 $formattedNumber = str_pad($this->md_appointment->getNextId(), 4, '0', STR_PAD_LEFT);
@@ -175,7 +123,6 @@
                 $_SESSION['appointment_notes'] = $appointment_notes;
                 // $this->md_appointment->enterAppointmentData($_SESSION['refno'],$_SESSION['Test_type'], $_SESSION['date'],$_SESSION['$appointment_time'],$_SESSION['appointment_duration'],$_SESSION['status'],$_SESSION['appointment_notes'],$_SESSION['useremail']);
                 }
-                $this->view("patientdashboard/appointment_date" , $data);
 
             }else{
                 $test_types = $this->md_testtype->getROw();
@@ -184,7 +131,11 @@
             }
             
 
-            stopResubmission();
+            $message = [
+                'status' => 'success'
+            ];
+            echo json_encode($message);
+            exit();
         }
 
         public function get_available_times($date){
@@ -254,7 +205,7 @@
                         break;
                     }
                     $sheduled_time = $this->md_testtype->getAvailableTime($date , $appointment_start_time_in_string , $appointment_end_time_in_string);
-                    echo($sheduled_time);
+                    // echo($sheduled_time);
                     if($sheduled_time){
                         $appointment_time = new DateTime($sheduled_time['Appointment_Time']);
                         $appointment_duration = new DateTime($sheduled_time['Appointment_Duration']);
@@ -277,7 +228,10 @@
 
                 $data['time_slots'] = $available_times;
                 $data['time_slots_value'] = $available_start_times;
-                $this->view('patientdashboard/appointment_time' , $data);
+                
+                echo(json_encode($data));
+                // echo json_encode($data);
+                exit();
             }
         }
 
@@ -285,41 +239,20 @@
             if($_SERVER['REQUEST_METHOD']=='GET'){
                 $_SESSION['appointment_time_as'] = $time;
             }
-            $data = [
-                'test_name'=>$_SESSION['Test_type'],
-                'test_price'=>$_SESSION['Test_cost']
+            $message = [
+                'status' => 'success'
             ];
-            $this->view('patientdashboard/appointment_payment' , $data);
+            echo json_encode($message);
+            exit();
         }
 
         public function cancelAppointment($id){
-            if(!isset($_SESSION['userid'])){
-                header("location: http://localhost/labora/user/logout");
-            }
-            // }else{
-            //     if((time()-$_SESSION['last_login_timestamp'])>600){
-            //         header("location: http://localhost/labora/user/logout");
-            //     }else{
-            //         $_SESSION['last_login_timestamp'] = time();
-            //     }
-            // }
             $data=[];
             $this->md_appointment->cancelAppointment($id);
             header("Location: http://localhost/labora/PatientDashboard/appointment");
         }
 
         public function editProfile(){
-            if(!isset($_SESSION['userid'])){
-                header("location: http://localhost/labora/user/logout");
-            }
-            // }else{
-            //     if((time()-$_SESSION['last_login_timestamp'])>600){
-            //         header("location: http://localhost/labora/user/logout");
-            //     }else{
-            //         $_SESSION['last_login_timestamp'] = time();
-            //     }
-            // }
-
 
             if($_SERVER['REQUEST_METHOD']=="POST"){
                 $_POST = filter_input_array(INPUT_POST , FILTER_SANITIZE_STRING);
@@ -356,16 +289,6 @@
 
 
         public function report(){
-            if(!isset($_SESSION['userid'])){
-                header("location: http://localhost/labora/user/logout");
-            }
-            // }else{
-            //     if((time()-$_SESSION['last_login_timestamp'])>600){
-            //         header("location: http://localhost/labora/user/logout");
-            //     }else{
-            //         $_SESSION['last_login_timestamp'] = time();
-            //     }
-            // }
             
             $data = array();
             $result = $this->md_report->getRowByEmail($_SESSION['useremail']);
@@ -399,6 +322,14 @@
             header("location: http://localhost/labora/PatientDashboard/report");
 
 
+        }
+
+        public function getPaymentPage(){
+            $data = [
+                'test_name' => $_SESSION['Test_type'],
+                'test_price' => $_SESSION['Test_cost']
+            ];
+            $this->view('patientdashboard/appointment_payment' , $data);
         }
 
         public function payment(){
@@ -448,7 +379,12 @@
         {
             $this->md_appointment->enterAppointmentData($_SESSION['refno'],$_SESSION['Test_type'], $_SESSION['date'],$_SESSION['appointment_time_as'],$_SESSION['appointment_duration'],$_SESSION['status'],$_SESSION['appointment_notes'],$_SESSION['useremail']);
             exit();
-        }    
+        }
+        
+        public function showReports(){
+            $data = [];
+            $this->view('patientdashboard\reports\abc.pdf' , $data);
+        }
 
 }
 ?>

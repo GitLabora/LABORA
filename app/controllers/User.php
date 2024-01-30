@@ -131,6 +131,7 @@
             $_SESSION['userid'] = $user['patient_id'];
             $_SESSION['useremail'] = $user['patient_email'];
             $_SESSION['last_login_timestamp'] = time();
+            $_SESSION['role'] = 'patient';
             header("Location: ".URLROOT."PatientDashboard/dashboard");
         }
 

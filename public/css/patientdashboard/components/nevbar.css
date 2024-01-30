@@ -300,6 +300,7 @@ body
     background-color: rgba(192, 189, 255, 0.1);
     padding: 10px 50px;
     color: #0e0e0e;
+    min-height: 650px;
   }
 
   .table-container table {

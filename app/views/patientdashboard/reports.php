@@ -16,55 +16,67 @@
 <body>
     <?php require_once 'components/nevbar.php' ?>
     <div class="container_1">
-
-        <div class="tablename">
-            <h3>Medical Reports</h3>
+        <div class="table-container">
+        <h2><i class="fa-solid fa-calendar-check"></i>Medical Reports</h2>
+        <div class="search-container">
+        <input type="text" class="search-box" id="searchInput" placeholder="Search...">
+        <button class="search-button">Search</button>
         </div>
-        <div class="line"></div>
-        <div class="searchbar">
-            <input type="text" class="search" placeholder="Enter reference number">
-            <a href="#" class="searchbtn">Search</a>
+        <div class="filter-box">
+            <div class="filter-section">
+                <!-- Add your filter options here -->
+                <select class="filter-box">
+                <option value="all">All</option>
+                <option value="category1">Category 1</option>
+                <option value="category2">Category 2</option>
+                <!-- Add more filter options as needed -->
+                </select>
+                <button class="filter-button">Filter By ID</button>
+            </div>
+            <div class="filter-section">
+                <!-- Add your filter options here -->
+                <select class="filter-box">
+                <option value="all">All</option>
+                <option value="category1">Category 1</option>
+                <option value="category2">Category 2</option>
+                <!-- Add more filter options as needed -->
+                </select>
+                <button class="filter-button">Filter By Email</button>
+            </div>
         </div>
-
-        <div class="filter">
-            <form action="#" method="post">
-                <input type="text" class="test-type" placeholder="Enter test type">
-                <input type="date" class="from">
-                <input type="date" class="to">
-                <button type="submit" class="submit button">Filter</button>
-            </form>
-        </div>
-
-        <div>
-        <table>
+        <table id="myTable">
         <thead>
-            <tr>
-                <th>Index</th>
-                <th>Ref No</th>
-                <th>Test Type</th>
-                <th>Date</th>
-                <th>Message</th>
-                <th></th>
-            </tr>
-        </thead>
+            <th>Index</th>
+            <th>Ref No</th>
+            <th>Test Type</th>
+            <th>Date</th>
+            <th>Message</th>
+            <th>Actions</th>
+        </thead >
         <tbody>
-        <?php
-            $reversedArray = array_reverse($data, true);
-            foreach ($reversedArray as $row) {
-                echo '<tr>
-                <td>'.$row['id'].'</td>
-                <td>'.$row['ref_no'].'</td>
-                <td>'.$row['test_type'].'</td>
-                <td>'.$row['date'].'</td>
-                <td>'.$row['message'].'</td>
-                <td><a href="http://localhost/uploads/'.$row['path'].'" >View</a><a href="http://localhost/labora/PatientDashboard/deleteReport/'.$row['id'].'/'.$row['path'].'">delete</a></td>
-                
-            </tr>';
-            }
-            ?>
-            <!-- Add more rows as needed -->
-        </tbody>
+                <div class='table_body'>
+                    <?php
+                    $reversedArray = array_reverse($data, true);
+                    foreach ($reversedArray as $row) {
+                        echo '<tr>
+                        <td>'.$row['id'].'</td>
+                        <td>'.$row['ref_no'].'</td>
+                        <td>'.$row['test_type'].'</td>
+                        <td>'.$row['date'].'</td>
+                        <td>'.$row['message'].'</td>
+                        <td><a href="http://localhost/uploads/'.$row['path'].'" >View</a> <a href="http://localhost/labora/PatientDashboard/deleteReport/'.$row['id'].'/'.$row['path'].'">delete</a></td>
+                    </tr>';
+                    }
+                    ?>   
+                    <!-- Add more rows as needed -->
+                </div>
+            </tbody>
         </table>
+            <div class="pagination">
+            <h5 id="table_data"></h5>
+            <button onclick="previousPage()" >Previous</button>
+            <button onclick="nextPage()" id="next">Next</button>
+            </div>
         </div>
     </div>
 </body>

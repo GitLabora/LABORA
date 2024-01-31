@@ -27,12 +27,19 @@
         </div>
 
         <div class="filter">
-            <form action="#" method="post">
-                <input type="date" class="from">
+        <form action="#" method="post">
+            <select id="status" name="status" placeholder="Select the status">
+                <option value="pending">Pending</option>
+                <option value="approved">Approved</option>
+                <option value="rejected">Rejected</option>
+            </select>
                 <button type="submit" class="submit button">Filter</button>
             </form>
         </div>
-
+        <div class="add">
+            
+            <a href="http://localhost/labora/invmng/orderForm" class="addbtn"><ion-icon name="add"></ion-icon>Make an order</a>
+         </div>
         <div>
         <table>
         <thead>

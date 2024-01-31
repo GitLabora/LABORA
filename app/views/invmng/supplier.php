@@ -36,7 +36,6 @@
                 <th>Contact No</th>
                 <th>Address</th>
                 <th>Email</th>
-                <th>Notes</th>
                 <th>Supplier Items</th>
                 
             </tr>
@@ -45,38 +44,14 @@
         <tr>
         <td>1</td>
         <td>101</td>
-        <td>ABC Electronics</td>
+        <td>ABC Supplies</td>
         <td>+94 -123-4567</td>
         <td>123 Main St, City, ST</td>
         <td>john.smith@email.com</td>
-        <td>Primary supplier for electronic components.</td>
         <td><button type="submit" class="submit button">View</button></a>
                 </td>
     </tr>
-    <tr>
-        <td>2</td>
-        <td>102</td>
-        <td>XYZ Supplies</td>
-        <td>+94 -987-6543</td>
-        <td>456 Oak Ave, Town, ST</td>
-        <td>sarah.johnson@email.com</td>
-        <td>Provides various office supplies.</td>
-        <td><button type="submit" class="submit button">View</button></a>
-                </td>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>103</td>
-        <td>JKL Manufacturing</td>
-        <td>+94 -321-7890</td>
-        <td>789 Elm Rd, Village, ST</td>
-        <td>mike.brown@email.com</td>
-        <td>Specializes in custom parts.</td>
-        <td><button type="submit" class="submit button">View</button></a>
-                </td>
-    </tr>
-            
-            <!-- Add more rows as needed -->
+ 
         </tbody>
         </table>
         </div>

@@ -111,6 +111,27 @@ button.submit:hover {
     background-color: #0056b3;
 }
 
+button.del{
+    background-color: #ff0000;
+}
+button.del:hover{
+    background-color: #a70000;
+}
+
+a.del {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 16px;
+    text-decoration: none;
+}
+
+a.del:hover {
+    background-color: #ff0000;
+}
+
 /* override nev bar for keep white check */
 
 .navigation ul li:nth-child(2)

@@ -43,7 +43,7 @@
        
         <td>8</td>
         <td>10</td>
-        <td><a href="#" class="download"><ion-icon name="cart"></ion-icon></a></td>
+        <td><a href="http://localhost/labora/invmng/orderForm" class="download"><ion-icon name="cart"></ion-icon></a></td>
     </tr>
     <tr>
         <td>1002</td>
@@ -51,7 +51,7 @@
     
         <td>18</td>
         <td>20</td>
-        <td><a href="#" class="download"><ion-icon name="cart"></ion-icon></a></td>
+        <td><a href="http://localhost/labora/invmng/orderForm" class="download"><ion-icon name="cart"></ion-icon></a></td>
     </tr>
     <tr>
         <td>1003</td>
@@ -59,7 +59,7 @@
     
         <td>3</td>
         <td>5</td>
-        <td><a href="#" class="download"><ion-icon name="cart"></ion-icon></a></td>
+        <td><a href="http://localhost/labora/invmng/orderForm" class="download"><ion-icon name="cart"></ion-icon></a></td>
     </tr>
            
             <!-- Add more rows as needed -->

@@ -45,7 +45,7 @@
         <td>11A</td>
         <td>5</td>
         <td>2022-11-15</td>
-        <td><a href="#" class="delete"><ion-icon name="trash"></ion-icon></a></td>
+        <td><a href="#" class="del" >Delete</a></td>
     </tr>
     <tr>
         <td>1002</td>
@@ -53,7 +53,7 @@
         <td>42D</td>
         <td>10</td>
         <td>2022-12-05</td>
-        <td><a href="#" class="delete"><ion-icon name="trash"></ion-icon></a></td>
+        <td><a href="#" class="del" >Delete</a></td>
     </tr>
     <tr>
         <td>1003</td>
@@ -61,7 +61,7 @@
         <td>12S</td>
         <td>10</td>
         <td>2021-12-09</td>
-        <td><a href="#" class="delete"><ion-icon name="trash"></ion-icon></a></td>
+        <td><a href="#" class="del" >Delete</a></td>
     </tr>
             <!-- Add more rows as needed -->
         </tbody>

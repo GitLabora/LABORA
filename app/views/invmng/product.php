@@ -21,68 +21,64 @@
             <h3>Inventory Item Details</h3>
         </div>
         <div class="line"></div>
+
         <div class="searchbar">
             <input type="text" class="search" placeholder="Enter Item">
             <a href="#" class="searchbtn">Search</a>
+        </div>
+
+        <div class="filter">
+            <form action="#" method="post">
+            <select id="item-type" name="item-type" placeholder="Select type">
+                <option value="Chemical">Chemical</option>
+                <option value="Laboratory Equipments">Laboratory Equipments</option>
+            </select>
+               
+                <button type="submit" class="submit button">Filter</button>
+            </form>
+        </div>
+
+        <div class="add">  
+            <a href="http://localhost/labora/invmng/addInventoryForm" class="addbtn"><ion-icon name="add"></ion-icon> Add a New Item</a>
         </div>
 
         <div>
         <table>
         <thead>
             <tr>
-                <th>Index</th>
+         
                 <th>Item ID</th>
                 <th>Item Name</th>
-                <th>Quantity in Stock</th>
                 <th>Reorder Level</th>
-                <th>Purchase Price</th>
-                <th>Item List</th>
+                <th>Actions</th>
             </tr>
         </thead>
+       
         <tbody>
-        <tr>
-        <td>1</td>
-        <td>1001</td>
-        <td>Laptop - Model A</td>
-        <td>25</td>
-        <td>10</td>
-        <td>$800</td>
-        <td><a href="http://localhost/labora/invmng/viewInventory" ><button>View</button></a>
-                </td>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>1002</td>
-        <td>Desktop PC - Model B</td>
-        <td>15</td>
-        <td>20</td>
-        <td>$1200</td>
-        <td>
-            <a href="http://localhost/labora/invmng/viewInventory"><button>View</button></a>
-      
-                </td>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>1003</td>
-        <td>Monitor - 27-inch</td>
-        <td>30</td>
-        <td>15</td>
-        <td>$250</td>
-        <td><a href="http://localhost/labora/invmng/viewInventory" ><button>View</button></a>
-                </td>
-    </tr>
-    <tr>
-        <td>4</td>
-        <td>1004</td>
-        <td>Keyboard - Wireless</td>
-        <td>50</td>
-        <td>30</td>
-        <td>$30</td>
-        <td><a href="http://localhost/labora/invmng/viewInventory"><button>View</button></a>
-                </td>
-    </tr>
-            <!-- Add more rows as needed -->
+
+         <?php
+           // Sort the array based on Item_Id
+            usort($data, function($a, $b) {
+                return $a['Item_Id'] - $b['Item_Id'];
+            });
+
+            // Output the sorted array
+            foreach ($data as $row) {
+                echo '<tr>
+                    <td>'.$row['Item_Id'].'</td>
+                    <td>'.$row['Item_Name'].'</td>
+                    <td>'.$row['Reorder_Level'].'</td>
+                    <td><a href="http://localhost/labora/invmng/itemDetails/'.$row['Item_Id'].'" class="view" >View</a>
+                    <a href="#" class="edit" >Edit</a>
+                    <a href="http://localhost/labora/invmng/deleteItem/'.$row['Item_Id'].'" class="del">Delete</a>
+                   </td>
+                </tr>';
+            }
+
+            ?> 
+            
+       
+       
         </tbody>
         </table>
         </div>

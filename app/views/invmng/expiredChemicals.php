@@ -30,14 +30,27 @@
         <th>Item ID</th>
         <th>Item Name</th>
        
-        <th>Sub ID</th>
+        <th>Batch ID</th>
         <th>Expired Quantity</th>
         <th>Added Date</th>
         <th>Action</th>
     </tr>
         </thead>
         <tbody>
-        
+        <!-- <?php
+            foreach ($data as $row) {
+                echo '<tr>
+                    <td>'.$row['batch_id'].'</td>
+                    <td>'.$row['supplier_name'].'</td>
+                    <td>'.$row['contact_no'].'</td>
+                    <td>'.$row['address'].'</td>
+                    <td>'.$row['email'].'</td>
+                    <td><a href="#" class="view" >View</a>
+                   </td>
+                </tr>';
+            }
+
+            ?>  -->
     <tr>
         <td>1001</td>
         <td>Chemical A</td>

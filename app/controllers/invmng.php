@@ -1,9 +1,11 @@
 <?php
     class invmng extends Controller{
         private $md_product;
+        private $md_supplier;
 
         public function __construct(){
-            $this->md_product = $this->model('M_product');       
+            $this->md_product = $this->model('M_product'); 
+            $this->md_supplier = $this->model('M_supplier');      
         }
 
         public function order(){
@@ -54,6 +56,32 @@
             $this->view("invmng/product" , $data);
         }
 
+        public function supplier(){
+            if(!isset($_SESSION['empid'])){
+                header("location: http://localhost/labora/user/logout");
+            }
+        
+            // Fetch supplier data from the model
+            $data = array();
+            $suppliers = $this->md_supplier->getAllSuppliers();
+            if ($suppliers->num_rows > 0) {
+                while ($row = $suppliers->fetch_assoc()) {
+                    // Add each row as an associative array to the $data array
+                    $data[] = $row;
+                }
+            }else{
+                $data = [[
+                    'supplier_id'=> "",
+                    'supplier_name' => '',
+                    'contact_no' => '',
+                    'address' => '',
+                    'email' => '',
+                ],];
+                $this->view("invmng/supplier" , $data);
+            }
+            $this->view("invmng/supplier", $data);
+        }
+
         public function dashboard(){
             if(!isset($_SESSION['empid'])){
                 header("location: http://localhost/labora/user/logout");
@@ -70,21 +98,6 @@
             $this->view("invmng/dashboard" , $data);
         }
 
-        public function supplier(){
-            if(!isset($_SESSION['empid'])){
-                header("location: http://localhost/labora/user/logout");
-            }
-            // }else{
-            //     if((time()-$_SESSION['last_login_timestamp'])>600){
-            //         header("location: http://localhost/labora/user/logout");
-            //     }else{
-            //         $_SESSION['last_login_timestamp'] = time();
-            //     }
-            // }
-
-            $data = [];
-            $this->view("invmng/supplier" , $data);
-        }
 
         public function expiredChemicals(){
             if(!isset($_SESSION['empid'])){
@@ -149,52 +162,7 @@
             $data = [];
             $this->view("invmng/quotations" , $data);
         }
-
-        // public function addInventoryForm(){
-        //     if(!isset($_SESSION['empid'])){
-        //         header("location: http://localhost/labora/user/logout");
-        //     }
-        //     // }else{
-        //     //     if((time()-$_SESSION['last_login_timestamp'])>600){
-        //     //         header("location: http://localhost/labora/user/logout");
-        //     //     }else{
-        //     //         $_SESSION['last_login_timestamp'] = time();
-        //     //     }
-        //     // }
-
-        //      $data = [
-        //         'dateerr' => ""
-        //     ];
-
-        //     if($_SERVER['REQUEST_METHOD']=="POST"){
-
-        //         $_POST = filter_input_array(INPUT_POST , FILTER_SANITIZE_STRING);
-
-        //         //$item_id = trim($_POST['item-id']);
-        //         $item_name = trim($_POST['item-name']);
-        //         $reorder_level = trim($_POST['reorder-limit']);
-        //         $supplier_name = trim($_POST['supplier-name']);
-
-        //         $data = [
-        //             'dateerr' => ""
-        //         ];
-
-
-        //         if(empty($data["dateerr"])){
-        //         $formattedNumber = str_pad($this->md_product->getNextId(), 4, '0', STR_PAD_LEFT);
-
-        //         $refno = 'LB-'.$formattedNumber;
-
-        //         $this->md_product->enterItemData($item_name,$reorder_level,$supplier_name);
-        //         }
-                
-        //     }else{
-                
-        //     }
-           
-        //     $this->view("invmng/addInventoryForm" , $data);
-        // }
-
+        
         public function addInventoryForm(){
             // Check if the user is logged in
             if(!isset($_SESSION['empid'])){
@@ -281,22 +249,6 @@
         }
 
 
-        // public function deleteItem($item_id){
-        //     // Check if item exists
-        //     if($this->md_product->getItemById($item_id)){
-        //         // Attempt to delete item
-        //         if($this->md_product->deleteItemById($item_id)){
-        //             // Item successfully deleted
-        //             echo "Item with ID $item_id deleted successfully.";
-        //         } else {
-        //             // Failed to delete item
-        //             echo "Error deleting item with ID $item_id.";
-        //         }
-        //     } else {
-        //         // Item does not exist
-        //         echo "Item with ID $item_id does not exist.";
-        //     }
-        // }
 
         public function deleteItem($item_id){
             if ($this->md_product->getItemById($item_id)) {

@@ -5,21 +5,6 @@
                 $this->conn = new Database;
                 $this->conn = $this->conn->dbObject();
             }
-            // public function enterItemData($item_name,$quantity,$reorder_level){
-            //     // get last row id
-            //     $result =mysqli_query($this->conn , "SELECT * FROM inventorychemical ORDER BY item_id  DESC LIMIT 1") ;
-            //     $item = mysqli_fetch_assoc($result);
-            //     $lastid = 0;
-            //     if(isset($item['item-id'])){
-            //         $lastid = $item['item-id'];
-            //     }
-
-            //     $nextid = $lastid +1;
-            //     $query = "INSERT INTO inventorychemical VALUES('$nextid','$item_name','$quantity','$reorder_level')";
-            //     mysqli_query($this->conn , $query);
-            //     // echo
-            //     // "<script> alert('Item is Successfully added to the system');</script>";
-            // }
             public function enterItemData($item_name, $reorder_level){
                 $query = "INSERT INTO inventorychemical (item_name, reorder_level) VALUES ('$item_name',  '$reorder_level')";
                 mysqli_query($this->conn, $query);

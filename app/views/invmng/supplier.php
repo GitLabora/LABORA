@@ -30,7 +30,7 @@
         <table>
         <thead>
             <tr>
-                <th>Index</th>
+                <!-- <th>Index</th> -->
                 <th>Supplier ID</th>
                 <th>Supplier Name</th>
                 <th>Contact No</th>
@@ -41,18 +41,22 @@
             </tr>
         </thead>
         <tbody>
-        <tr>
-        <td>1</td>
-        <td>101</td>
-        <td>ABC Supplies</td>
-        <td>+94 -123-4567</td>
-        <td>123 Main St, City, ST</td>
-        <td>john.smith@email.com</td>
-        <td><button type="submit" class="submit button">View</button></a>
-                </td>
-    </tr>
- 
+            <?php
+            foreach ($data as $row) {
+                echo '<tr>
+                    <td>'.$row['supplier_id'].'</td>
+                    <td>'.$row['supplier_name'].'</td>
+                    <td>'.$row['contact_no'].'</td>
+                    <td>'.$row['address'].'</td>
+                    <td>'.$row['email'].'</td>
+                    <td><a href="#" class="view" >View</a>
+                   </td>
+                </tr>';
+            }
+
+            ?> 
         </tbody>
+
         </table>
         </div>
     </div>

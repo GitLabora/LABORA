@@ -21,6 +21,12 @@
             <h3>Inventory Item Details</h3>
         </div>
         <div class="line"></div>
+
+        
+        <div class="add">  
+            <a href="http://localhost/labora/invmng/addInventoryForm" class="addbtn"><ion-icon name="add"></ion-icon> Add a New Item</a>
+        </div>
+        
             <table>
                 <thead>
                     <tr>
@@ -45,6 +51,7 @@
             <table>
                 <thead>
                     <tr>
+                        <th>Batch ID</th>
                         <th>Supplier ID</th>
                         <th>Added Date</th>
                         <th>Expired Date</th>
@@ -53,17 +60,19 @@
                     </tr>
                 </thead>
                 <tbody>
-                <?php foreach ($item_details as $item): ?>
-                        <tr>
-                            <td><?php echo $item['Supplier_Id']; ?></td>
-                            <td><?php echo $item['Added_Date']; ?></td>
-                            <td><?php echo $item['Expired_Date']; ?></td>
-                            <td><?php echo $item['Quantity']; ?></td>
-                            <td><a href="#" class="edit" >Edit</a>
-                                <a href="#" class="del" >Delete</a>
-                            </td>
-                        </tr>
-                    <?php endforeach; ?>
+                <?php  
+                foreach ($data as $row) {
+                    echo '<tr>
+                        <td>'.$row['batch_id'].'</td>
+                        <td>'.$row['supplier_id'].'</td>
+                        <td>'.$row['added_date'].'</td>
+                        <td>'.$row['expired_date'].'</td>
+                        <td>'.$row['quantity'].'</td>
+                        <td><a href="#" class="edit" >Edit</a>
+                        <td><a href="#" class="del" >Delete</a>
+                    </td>
+                    </tr>';
+                }?>
                 </tbody>
             </table>
 
